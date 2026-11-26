@@ -277,12 +277,12 @@ function votar(j,m,v){
 /* ---------- nuvem: os votos vão para um gist SECRETO do GitHub do dono, para o Claude ler sem precisar colar ----------
    o token fica só no aparelho. Reaproveita o token da Estante do Switch (mesmo endereço github.io), se já existir. */
 const K_QUANDO = 'mods_votos_quando', K_TOKEN = 'mods-switch-token', K_GIST = 'mods-switch-gist';
-const TOKEN_ESTANTE = 'lista-switch-gabriel-v1-sync-token';
+const TOKENS_ESTANTE = ['estante-switch-v1-sync-token', 'lista-switch-gabriel-v1-sync-token'];   // o 1º é o da Estante atual
 const DESC = 'Mods do Switch: votos (o Claude lê daqui; não apague)', ARQ = 'mods-switch-votos.json';
 const LINK_TOKEN = 'https://github.com/settings/tokens/new?scopes=gist&description=Mods%20do%20Switch';
 function ls(k){ try { return localStorage.getItem(k); } catch(e) { return null; } }
 function lsSet(k,v){ try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch(e) {} }
-function token(){ return ls(K_TOKEN) || ls(TOKEN_ESTANTE); }
+function token(){ return ls(K_TOKEN) || TOKENS_ESTANTE.map(ls).find(Boolean) || null; }
 function nuvemMsg(t, cor){ const e = document.getElementById('nuvem'); if (e) { e.innerHTML = t; e.dataset.cor = cor || ''; } }
 async function gh(metodo, caminho, corpo){
   const r = await fetch('https://api.github.com' + caminho, {method: metodo,
