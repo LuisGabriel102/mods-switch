@@ -351,11 +351,13 @@
      "n": 33,
      "emoji": "🛒",
      "nome": "Carroça do Nômade",
-     "ganha": "Loja de bugigangas com 24 itens (era 16)",
-     "paga": "Preços +25%",
-     "status": "achado",
-     "ref": "inventory: trinket_store + trinkets: price",
-     "voto": ""
+     "ganha": "O dobro de bugigangas à venda em cada nível da Carroça (até 16)",
+     "paga": "Todas as bugigangas custam 25% mais",
+     "status": "pronto",
+     "ref": "carroca_nomade",
+     "voto": "sim",
+     "receita": "# CARROÇA DO NÔMADE: o dobro de bugigangas à venda em cada nível da Carroça (máx. 16, o que cabe na tela);\n# em troca, todas as bugigangas custam 25% mais.\n*nomad_wagon.building|data|stores#trinket_supply|data|number_of_trinkets_upgrades#*|amount   x2   max 16\n*trinkets/*|entries#*|price                                                                  x1.25",
+     "dlc": false
     },
     {
      "n": 34,
@@ -371,11 +373,13 @@
      "n": 35,
      "emoji": "🎖️",
      "nome": "Veterano de Guerra",
-     "ganha": "Missões dão +50% de experiência",
-     "paga": "Heróis experientes recusam missões fáceis mais cedo",
-     "status": "achado",
-     "ref": "quest.generation: resolve_xp_table + roster",
-     "voto": ""
+     "ganha": "Missões dão 50% mais experiência",
+     "paga": "Os heróis passam do nível das masmorras fáceis mais cedo (e recusam ir)",
+     "status": "pronto",
+     "ref": "veterano_guerra",
+     "voto": "sim",
+     "receita": "# VETERANO DE GUERRA: missões dão 50% mais experiência (determinação). O preço vem sozinho: os heróis ficam fortes\n# demais para as masmorras fáceis mais cedo (e recusam ir nelas).\n*quest.generation|generation|rewards|resolve_xp_table#*      x1.5",
+     "dlc": false
     },
     {
      "n": 36,
@@ -391,31 +395,37 @@
      "n": 37,
      "emoji": "🛡️",
      "nome": "Herança do Ferreiro",
-     "ganha": "Arma e armadura iniciais já com o poder do nível 1",
-     "paga": "A primeira melhoria custa o dobro",
-     "status": "achado",
-     "ref": "heroes: weapon_0, armour_0 + upgrades",
-     "voto": ""
+     "ganha": "Arma e armadura iniciais de todo herói já com o poder do nível 1",
+     "paga": "A primeira melhoria de arma e de armadura custa o dobro",
+     "status": "pronto",
+     "ref": "heranca_ferreiro",
+     "voto": "sim",
+     "receita": "# HERANÇA DO FERREIRO: arma e armadura INICIAIS de cada herói já com o poder do nível 1 do Ferreiro;\n# em troca, a PRIMEIRA melhoria de arma e de armadura custa o dobro. (gerada a partir dos valores do jogo)\ndlc:crimson_court/features/flagellant/heroes/flagellant/flagellant.info|armour#flagellant_armour_0|def =5\ndlc:crimson_court/features/flagellant/heroes/flagellant/flagellant.info|armour#flagellant_armour_0|hp =26\ndlc:crimson_court/features/flagellant/heroes/flagellant/flagellant.info|weapon#flagellant_weapon_0|crit =3\ndlc:crimson_court/features/flagellant/heroes/flagellant/flagellant.info|weapon#flagellant_weapon_0|dmg.1 =4\ndlc:crimson_court/features/flagellant/heroes/flagellant/flagellant.info|weapon#flagellant_weapon_0|dmg.2 =7\ndlc:fires_edge/features/duelist/heroes/duelist/duelist.info|armour#duelist_armour_0|def =10\ndlc:fires_edge/features/duelist/heroes/duelist/duelist.info|armour#duelist_armour_0|hp =24\ndlc:fires_edge/features/duelist/heroes/duelist/duelist.info|weapon#duelist_weapon_0|crit =6\ndlc:fires_edge/features/duelist/heroes/duelist/duelist.info|weapon#duelist_weapon_0|dmg.1 =6\ndlc:fires_edge/features/duelist/heroes/duelist/duelist.info|weapon#duelist_weapon_0|dmg.2 =8\ndlc:fires_edge/features/runaway/heroes/runaway/runaway.info|armour#runaway_armour_0|def =10\ndlc:fires_edge/features/runaway/heroes/runaway/runaway.info|armour#runaway_armour_0|hp =28\ndlc:fires_edge/features/runaway/heroes/runaway/runaway.info|weapon#runaway_weapon_0|crit =5\ndlc:fires_edge/features/runaway/heroes/runaway/runaway.info|weapon#runaway_weapon_0|dmg.1 =5\ndlc:fires_edge/features/runaway/heroes/runaway/runaway.info|weapon#runaway_weapon_0|dmg.2 =8\ndlc:musketeer/heroes/musketeer/musketeer.info|armour#musketeer_armour_0|def      =5\ndlc:musketeer/heroes/musketeer/musketeer.info|armour#musketeer_armour_0|hp       =32\ndlc:musketeer/heroes/musketeer/musketeer.info|weapon#musketeer_weapon_0|crit     =7\ndlc:musketeer/heroes/musketeer/musketeer.info|weapon#musketeer_weapon_0|dmg.1    =5\ndlc:musketeer/heroes/musketeer/musketeer.info|weapon#musketeer_weapon_0|dmg.2    =10\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|armour#shieldbreaker_armour_0|def =13\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|armour#shieldbreaker_armour_0|hp =24\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|weapon#shieldbreaker_weapon_0|crit =7\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|weapon#shieldbreaker_weapon_0|dmg.1 =6\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|weapon#shieldbreaker_weapon_0|dmg.2 =12\ndlc:shieldbreaker/heroes/shieldbreaker/shieldbreaker.info|weapon#shieldbreaker_weapon_0|spd =6\nheroes/abomination/abomination.info|armour#abomination_armour_0|def              =12.5\nheroes/abomination/abomination.info|armour#abomination_armour_0|hp               =31\nheroes/abomination/abomination.info|weapon#abomination_weapon_0|crit             =3\nheroes/abomination/abomination.info|weapon#abomination_weapon_0|dmg.1            =7\nheroes/abomination/abomination.info|weapon#abomination_weapon_0|dmg.2            =13\nheroes/antiquarian/antiquarian.info|armour#antiquarian_armour_0|def              =15\nheroes/antiquarian/antiquarian.info|armour#antiquarian_armour_0|hp               =20\nheroes/antiquarian/antiquarian.info|weapon#antiquarian_weapon_0|crit             =2\nheroes/antiquarian/antiquarian.info|weapon#antiquarian_weapon_0|dmg.1            =4\nheroes/antiquarian/antiquarian.info|weapon#antiquarian_weapon_0|dmg.2            =6\nheroes/arbalest/arbalest.info|armour#arbalest_armour_0|def                       =5\nheroes/arbalest/arbalest.info|armour#arbalest_armour_0|hp                        =32\nheroes/arbalest/arbalest.info|weapon#arbalest_weapon_0|crit                      =7\nheroes/arbalest/arbalest.info|weapon#arbalest_weapon_0|dmg.1                     =5\nheroes/arbalest/arbalest.info|weapon#arbalest_weapon_0|dmg.2                     =10\nheroes/bounty_hunter/bounty_hunter.info|armour#bounty_hunter_armour_0|def        =10\nheroes/bounty_hunter/bounty_hunter.info|armour#bounty_hunter_armour_0|hp         =30\nheroes/bounty_hunter/bounty_hunter.info|weapon#bounty_hunter_weapon_0|crit       =5\nheroes/bounty_hunter/bounty_hunter.info|weapon#bounty_hunter_weapon_0|dmg.1      =6\nheroes/bounty_hunter/bounty_hunter.info|weapon#bounty_hunter_weapon_0|dmg.2      =12\nheroes/crusader/crusader.info|armour#crusader_armour_0|def                       =10\nheroes/crusader/crusader.info|armour#crusader_armour_0|hp                        =40\nheroes/crusader/crusader.info|weapon#crusader_weapon_0|crit                      =4\nheroes/crusader/crusader.info|weapon#crusader_weapon_0|dmg.1                     =7\nheroes/crusader/crusader.info|weapon#crusader_weapon_0|dmg.2                     =14\nheroes/grave_robber/grave_robber.info|armour#grave_robber_armour_0|def           =15\nheroes/grave_robber/grave_robber.info|armour#grave_robber_armour_0|hp            =24\nheroes/grave_robber/grave_robber.info|weapon#grave_robber_weapon_0|crit          =7\nheroes/grave_robber/grave_robber.info|weapon#grave_robber_weapon_0|dmg.1         =5\nheroes/grave_robber/grave_robber.info|weapon#grave_robber_weapon_0|dmg.2         =10\nheroes/hellion/hellion.info|armour#hellion_armour_0|def                          =15\nheroes/hellion/hellion.info|armour#hellion_armour_0|hp                           =31\nheroes/hellion/hellion.info|weapon#hellion_weapon_0|crit                         =6\nheroes/hellion/hellion.info|weapon#hellion_weapon_0|dmg.1                        =7\nheroes/hellion/hellion.info|weapon#hellion_weapon_0|dmg.2                        =14\nheroes/highwayman/highwayman.info|armour#highwayman_armour_0|def                 =15\nheroes/highwayman/highwayman.info|armour#highwayman_armour_0|hp                  =28\nheroes/highwayman/highwayman.info|weapon#highwayman_weapon_0|crit                =6\nheroes/highwayman/highwayman.info|weapon#highwayman_weapon_0|dmg.1               =6\nheroes/highwayman/highwayman.info|weapon#highwayman_weapon_0|dmg.2               =12\nheroes/houndmaster/houndmaster.info|armour#houndmaster_armour_0|def              =15\nheroes/houndmaster/houndmaster.info|armour#houndmaster_armour_0|hp               =25\nheroes/houndmaster/houndmaster.info|weapon#houndmaster_weapon_0|crit             =5\nheroes/houndmaster/houndmaster.info|weapon#houndmaster_weapon_0|dmg.1            =5\nheroes/houndmaster/houndmaster.info|weapon#houndmaster_weapon_0|dmg.2            =8\nheroes/jester/jester.info|armour#jester_armour_0|def                             =20\nheroes/jester/jester.info|armour#jester_armour_0|hp                              =23\nheroes/jester/jester.info|weapon#jester_weapon_0|crit                            =5\nheroes/jester/jester.info|weapon#jester_weapon_0|dmg.1                           =5\nheroes/jester/jester.info|weapon#jester_weapon_0|dmg.2                           =8\nheroes/leper/leper.info|armour#leper_armour_0|def                                =5\nheroes/leper/leper.info|armour#leper_armour_0|hp                                 =42\nheroes/leper/leper.info|weapon#leper_weapon_0|crit                               =2\nheroes/leper/leper.info|weapon#leper_weapon_0|dmg.1                              =9\nheroes/leper/leper.info|weapon#leper_weapon_0|dmg.2                              =18\nheroes/man_at_arms/man_at_arms.info|armour#man_at_arms_armour_0|def              =10\nheroes/man_at_arms/man_at_arms.info|armour#man_at_arms_armour_0|hp               =37\nheroes/man_at_arms/man_at_arms.info|weapon#man_at_arms_weapon_0|crit             =3\nheroes/man_at_arms/man_at_arms.info|weapon#man_at_arms_weapon_0|dmg.1            =6\nheroes/man_at_arms/man_at_arms.info|weapon#man_at_arms_weapon_0|dmg.2            =10\nheroes/occultist/occultist.info|armour#occultist_armour_0|def                    =15\nheroes/occultist/occultist.info|armour#occultist_armour_0|hp                     =23\nheroes/occultist/occultist.info|weapon#occultist_weapon_0|crit                   =7\nheroes/occultist/occultist.info|weapon#occultist_weapon_0|dmg.1                  =5\nheroes/occultist/occultist.info|weapon#occultist_weapon_0|dmg.2                  =8\nheroes/plague_doctor/plague_doctor.info|armour#plague_doctor_armour_0|def        =5\nheroes/plague_doctor/plague_doctor.info|armour#plague_doctor_armour_0|hp         =26\nheroes/plague_doctor/plague_doctor.info|weapon#plague_doctor_weapon_0|crit       =3\nheroes/plague_doctor/plague_doctor.info|weapon#plague_doctor_weapon_0|dmg.1      =5\nheroes/plague_doctor/plague_doctor.info|weapon#plague_doctor_weapon_0|dmg.2      =8\nheroes/vestal/vestal.info|armour#vestal_armour_0|def                             =5\nheroes/vestal/vestal.info|armour#vestal_armour_0|hp                              =29\nheroes/vestal/vestal.info|weapon#vestal_weapon_0|crit                            =2\nheroes/vestal/vestal.info|weapon#vestal_weapon_0|dmg.1                           =5\nheroes/vestal/vestal.info|weapon#vestal_weapon_0|dmg.2                           =10\n*upgrades/heroes/*|trees#*.weapon|requirements#1|currency_cost#*|amount   x2\n*upgrades/heroes/*|trees#*.armour|requirements#1|currency_cost#*|amount   x2",
+     "dlc": false
     },
     {
      "n": 38,
      "emoji": "🎯",
      "nome": "Mestre de Ofício",
      "ganha": "Habilidades no nível máximo: +5 de precisão e +3% de crítico",
-     "paga": "A última melhoria de habilidade custa mais",
-     "status": "achado",
-     "ref": "heroes: combat_skill @4",
-     "voto": ""
+     "paga": "A última melhoria de cada habilidade custa 50% mais",
+     "status": "pronto",
+     "ref": "mestre_oficio",
+     "voto": "sim",
+     "receita": "# MESTRE DE OFÍCIO: habilidades de combate no nível máximo (5) ganham +5 de precisão e +3% de crítico;\n# em troca, a última melhoria de cada habilidade na Guilda custa 50% mais.\n*heroes/*|combat_skill#*@4|atk                                              +5\n*heroes/*|combat_skill#*@4|crit                                             +3\n*upgrades/heroes/*|trees#*|requirements#5|currency_cost#*|amount            x1.5   menos *.weapon|* menos *.armour|*",
+     "dlc": false
     },
     {
      "n": 39,
      "emoji": "🧬",
      "nome": "Peculiaridade de Nascença",
-     "ganha": "Recrutas chegam com +1 peculiaridade boa",
+     "ganha": "Todo recruta nasce com +1 peculiaridade boa",
      "paga": "E +1 ruim",
-     "status": "achado",
-     "ref": "stage_coach: number_of_extra_*_quirks",
-     "voto": ""
+     "status": "pronto",
+     "ref": "peculiaridade_nascenca",
+     "voto": "sim",
+     "receita": "# PECULIARIDADE DE NASCENÇA: todo recruta nasce com +1 peculiaridade boa... e +1 ruim.\n*heroes/*|generation|number_of_positive_quirks_*     +1\n*heroes/*|generation|number_of_negative_quirks_*     +1",
+     "dlc": false
     },
     {
      "n": 40,
@@ -475,7 +485,7 @@
      "paga": "Itens de suprimento mais raros no saque",
      "status": "ideia",
      "ref": "curios: Item Interactions (CSV)",
-     "voto": ""
+     "voto": "sim"
     },
     {
      "n": 46,
@@ -530,13 +540,19 @@
    ],
    "pacote": {
     "nome": "ESCOLHIDOS",
+    "versao": 1,
     "mods": [
      "colecionador",
      "peculiar_demais",
      "curiosidade_mata",
      "armeiro_generoso",
      "diligencia_veteranos",
-     "sem_recuo"
+     "sem_recuo",
+     "carroca_nomade",
+     "veterano_guerra",
+     "heranca_ferreiro",
+     "mestre_oficio",
+     "peculiaridade_nascenca"
     ],
     "nomes": [
      "Colecionador de Relíquias",
@@ -544,7 +560,12 @@
      "Curiosidade Mata",
      "Armeiro Generoso",
      "Diligência de Veteranos",
-     "Sem Recuo"
+     "Sem Recuo",
+     "Carroça do Nômade",
+     "Veterano de Guerra",
+     "Herança do Ferreiro",
+     "Mestre de Ofício",
+     "Peculiaridade de Nascença"
     ],
     "pronto": true
    }
