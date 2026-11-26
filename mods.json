@@ -7,7 +7,7 @@
    "cor": "#b3261e",
    "tid": "01008F1008DA6000",
    "resumo": "Masmorras góticas, estresse e tocha. Inclui as 5 DLCs (Crimson Court, Color of Madness, Shieldbreaker, Musketeer, Fire's Edge).",
-   "dados": "Arquivos de texto do próprio jogo (.darkest e .json): 92.991 valores que o motor sabe mudar.",
+   "dados": "Arquivos de texto do próprio jogo (.darkest, .json e a planilha de curiosidades): 93.187 valores que o motor sabe mudar.",
    "mods": [
     {
      "n": 1,
@@ -17,6 +17,7 @@
      "paga": "O lado ruim delas também soma: 2x o castigo",
      "status": "pronto",
      "ref": "colecionador",
+     "voto": "sim",
      "receita": "# COLECIONADOR DE RELÍQUIAS: o herói pode usar 2 bugigangas iguais (ancestrais, do Corvo, de troféu, de DLC...).\n# Os lados RUINS também somam: 2 iguais = 2x o bônus e 2x o castigo. (as comuns já não tinham limite: 0 = livre)\n*trinkets/*|entries#*|limit        x2",
      "dlc": true
     },
@@ -28,6 +29,7 @@
      "paga": "A tocha apaga 50% mais rápido",
      "status": "pronto",
      "ref": "pacto_escuridao",
+     "voto": "nao",
      "receita": "# PACTO DA ESCURIDÃO: a tocha apaga 50% mais rápido, mas no escuro o saque e o crítico dos heróis valem o DOBRO.\n# Jogo de risco: quanto mais escuro você aguenta, mais rico volta.\n*shared/rules|tile_light_loss#*|data                                    x1.5\n*shared/rules|darkness|range_table#*|value|loot_increase_gold           x2\n*shared/rules|darkness|range_table#*|value|loot_increase_treasure_draws x2\n*shared/rules|darkness|range_table#*|value|player_crit_increase         x2",
      "dlc": true
     },
@@ -39,6 +41,7 @@
      "paga": "O estresse sobe 25% mais rápido",
      "status": "pronto",
      "ref": "virtude_forjada",
+     "voto": "nao",
      "receita": "# VIRTUDE FORJADA: o estresse sobe mais rápido, mas o teste de determinação vira VIRTUDE com 45% (era 25%).\n# O estresse deixa de ser só castigo e vira aposta. Vale no modo normal, Radiante, NG+ e Lua de Sangue (Crimson Court).\n*shared/rules|affliction_critical_success_chance               =0.45\n*shared/rules|monster_crit|*stress_damage                       x1.25\n*shared/rules|hallway_stress|*stress_damage_*                   x1.25   menos *chance*\n*shared/rules|passed_turn_stress_dmg                            x1.25",
      "dlc": true
     },
@@ -50,6 +53,7 @@
      "paga": "Suprimentos 25% mais caros",
      "status": "pronto",
      "ref": "mochila_mercenario",
+     "voto": "nao",
      "receita": "# MOCHILA DE MERCENÁRIO: pilhas maiores de ouro, relíquias e suprimentos; em troca, suprimentos 25% mais caros.\n*inventory/*currency.inventory.items|inventory_item#*|base_stack_limit   x1.5   menos *#urn|* menos *#blueprint|*\n*inventory/*supply.inventory.items|inventory_item#*|base_stack_limit     x1.5\n*inventory/*supply.inventory.items|inventory_item#*|purchase_gold_value  x1.25",
      "dlc": true
     },
@@ -57,10 +61,13 @@
      "n": 5,
      "emoji": "🎭",
      "nome": "Peculiar Demais",
-     "ganha": "Até 7 peculiaridades boas (era 5) e mais travas",
-     "paga": "Até 7 ruins também",
-     "status": "achado",
-     "ref": "shared/rules: quirks_max_*"
+     "ganha": "Até 7 peculiaridades boas (era 5) e até 5 travadas (era 3) — experimental: conferir se a tela mostra as 7",
+     "paga": "As ruins também vão até 7 (e 5 travadas)",
+     "status": "pronto",
+     "ref": "peculiar_demais",
+     "voto": "sim",
+     "receita": "# PECULIAR DEMAIS: até 7 peculiaridades boas (era 5) e até 5 travadas (era 3); as ruins também vão até 7 / 5.\n# EXPERIMENTAL: conferir se a tela do herói mostra as 7 (se não mostrar, volto para 5 e deixo só as travas).\n*shared/rules|quirks_max_positive          =7\n*shared/rules|quirks_max_negative          =7\n*shared/rules|quirks_max_locked_positive   =5\n*shared/rules|quirks_max_locked_negative   =5",
+     "dlc": false
     },
     {
      "n": 6,
@@ -69,7 +76,8 @@
      "ganha": "Crítico de herói alivia o DOBRO de estresse",
      "paga": "Crítico de monstro estressa o dobro",
      "status": "achado",
-     "ref": "shared/rules: player_crit, monster_crit"
+     "ref": "shared/rules: player_crit, monster_crit",
+     "voto": "nao"
     },
     {
      "n": 7,
@@ -78,16 +86,20 @@
      "ganha": "Resistência à morte +15%",
      "paga": "Cada ida à Porta da Morte estressa o grupo o dobro",
      "status": "achado",
-     "ref": "heroes: death_blow + rules: deaths_door_*"
+     "ref": "heroes: death_blow + rules: deaths_door_*",
+     "voto": "nao"
     },
     {
      "n": 8,
      "emoji": "📦",
      "nome": "Curiosidade Mata",
-     "ganha": "Baús e altares disparam efeitos BONS com mais frequência",
-     "paga": "Os ruins também",
-     "status": "achado",
-     "ref": "shared/rules: curioTriggerChance_*"
+     "ganha": "Baús, altares e pilhas quase nunca dão \"nada\": tesouro e peculiaridades bem mais vezes",
+     "paga": "Armadilhas e doenças também vêm mais",
+     "status": "pronto",
+     "ref": "curiosidade_mata",
+     "voto": "sim",
+     "receita": "# CURIOSIDADE MATA: baús, altares e pilhas quase nunca dão \"nada\" (peso do Nothing vira 1/4).\n# Resultado: tesouro, peculiaridade E armadilha acontecem bem mais. (o Altar do Shambler fica como está)\n*curio_type_library|*|Nothing|peso       x0.25    menos *|shamblers_altar|*",
+     "dlc": false
     },
     {
      "n": 9,
@@ -96,7 +108,8 @@
      "ganha": "Ouro e tesouro em DOBRO",
      "paga": "Monstros com +30% de vida e dano",
      "status": "achado",
-     "ref": "monsters: hp/dmg + loot"
+     "ref": "monsters: hp/dmg + loot",
+     "voto": "nao"
     },
     {
      "n": 10,
@@ -105,7 +118,8 @@
      "ganha": "Golpe final alivia 3x mais estresse",
      "paga": "Andar no corredor estressa mais",
      "status": "achado",
-     "ref": "rules: hallway_stress, killing_blow_stress_relief"
+     "ref": "rules: hallway_stress, killing_blow_stress_relief",
+     "voto": "nao"
     },
     {
      "n": 11,
@@ -114,7 +128,8 @@
      "ganha": "Habilidades de acampamento custam 1 ponto a menos",
      "paga": "Cada uma só pode ser usada 1 vez por acampamento",
      "status": "achado",
-     "ref": "raid/camping: cost, use_limit"
+     "ref": "raid/camping: cost, use_limit",
+     "voto": "nao"
     },
     {
      "n": 12,
@@ -123,16 +138,20 @@
      "ganha": "Troca de relíquias com taxa melhor",
      "paga": "Relíquias caem menos nas masmorras",
      "status": "achado",
-     "ref": "heirloom_exchange + loot"
+     "ref": "heirloom_exchange + loot",
+     "voto": "nao"
     },
     {
      "n": 13,
      "emoji": "⚒️",
      "nome": "Armeiro Generoso",
-     "ganha": "+20% de dano e vida em cada nível do Ferreiro",
-     "paga": "Melhorias mais caras",
-     "status": "achado",
-     "ref": "heroes: weapon/armour + upgrades"
+     "ganha": "+20% de dano nas armas e de vida nas armaduras (níveis 1 a 4 do Ferreiro)",
+     "paga": "Melhorar arma e armadura custa 50% mais ouro",
+     "status": "pronto",
+     "ref": "armeiro_generoso",
+     "voto": "sim",
+     "receita": "# ARMEIRO GENEROSO: cada nível do Ferreiro (armas 1-4 e armaduras 1-4) dá +20% de dano e de vida;\n# em troca, melhorar arma e armadura do herói custa 50% mais ouro. Vale para os heróis das DLCs.\n*heroes/*|weapon#*_weapon_[1234]|dmg.*                                  x1.2\n*heroes/*|armour#*_armour_[1234]|hp                                     x1.2\n*upgrades/heroes/*|trees#*.weapon|requirements#*|currency_cost#*|amount  x1.5\n*upgrades/heroes/*|trees#*.armour|requirements#*|currency_cost#*|amount  x1.5",
+     "dlc": false
     },
     {
      "n": 14,
@@ -141,16 +160,20 @@
      "ganha": "Pegar doença fica 50% mais raro",
      "paga": "Os efeitos das doenças dobram",
      "status": "achado",
-     "ref": "rules: disease_* + effects"
+     "ref": "rules: disease_* + effects",
+     "voto": "nao"
     },
     {
      "n": 15,
      "emoji": "🐎",
      "nome": "Diligência de Veteranos",
-     "ganha": "Heróis chegam em nível 1-2",
-     "paga": "Custam ouro para recrutar",
-     "status": "ideia",
-     "ref": "campaign/roster (diligência)"
+     "ganha": "Heróis de nível 1, 2 e 3 chegam com o DOBRO de chance (com as melhorias da Diligência)",
+     "paga": "Chega 1 herói a menos por semana",
+     "status": "pronto",
+     "ref": "diligencia_veteranos",
+     "voto": "sim",
+     "receita": "# DILIGÊNCIA DE VETERANOS: com as melhorias da Diligência, heróis de nível 1, 2 e 3 chegam com o DOBRO de chance;\n# em troca, chega 1 herói a menos por semana.\n*stage_coach.building|data|stores#hero_recruit|data|upgraded_recruits_upgrades#*|chance        x2\n*stage_coach.building|data|stores#hero_recruit|data|number_of_recruits_upgrades#*|amount       -1   min 1",
+     "dlc": false
     },
     {
      "n": 16,
@@ -159,7 +182,8 @@
      "ganha": "Sangramento e veneno dos heróis +50% de dano",
      "paga": "Os dos monstros também",
      "status": "achado",
-     "ref": "effects: dotBleed, dotPoison"
+     "ref": "effects: dotBleed, dotPoison",
+     "voto": "nao"
     },
     {
      "n": 17,
@@ -168,7 +192,8 @@
      "ganha": "Atordoamento dos heróis +15% de chance",
      "paga": "Monstros resistem +10% a atordoar",
      "status": "achado",
-     "ref": "effects: stun + monsters: resistances"
+     "ref": "effects: stun + monsters: resistances",
+     "voto": "nao"
     },
     {
      "n": 18,
@@ -177,7 +202,8 @@
      "ganha": "Construções do Povoado custam metade",
      "paga": "A diligência traz menos heróis",
      "status": "achado",
-     "ref": "upgrades: custos"
+     "ref": "upgrades: custos",
+     "voto": "nao"
     },
     {
      "n": 19,
@@ -186,7 +212,8 @@
      "ganha": "Baús e curiosidades dão mais itens",
      "paga": "Pilhas de ouro menores no saque",
      "status": "achado",
-     "ref": "loot"
+     "ref": "loot",
+     "voto": "nao"
     },
     {
      "n": 20,
@@ -195,7 +222,8 @@
      "ganha": "Todos os heróis +2 de velocidade",
      "paga": "Todos os monstros também: combates frenéticos",
      "status": "achado",
-     "ref": "heroes/monsters: spd"
+     "ref": "heroes/monsters: spd",
+     "voto": "nao"
     },
     {
      "n": 21,
@@ -204,7 +232,8 @@
      "ganha": "Precisão dos heróis +5",
      "paga": "Monstros esquivam +5",
      "status": "achado",
-     "ref": "combat_skill: atk + monsters: defense"
+     "ref": "combat_skill: atk + monsters: defense",
+     "voto": "nao"
     },
     {
      "n": 22,
@@ -213,7 +242,8 @@
      "ganha": "Crítico de herói alivia o GRUPO TODO",
      "paga": "Crítico de monstro estressa o grupo todo",
      "status": "achado",
-     "ref": "rules: companion_stress_chance"
+     "ref": "rules: companion_stress_chance",
+     "voto": "nao"
     },
     {
      "n": 23,
@@ -222,16 +252,20 @@
      "ganha": "Peculiaridades ruins travam menos",
      "paga": "As boas também ficam menos presas",
      "status": "achado",
-     "ref": "rules: quirk_chance_to_lock_*"
+     "ref": "rules: quirk_chance_to_lock_*",
+     "voto": "nao"
     },
     {
      "n": 24,
      "emoji": "🏃",
      "nome": "Sem Recuo",
-     "ganha": "Vencer o combate dá mais saque",
-     "paga": "Fugir do combate estressa o dobro",
-     "status": "achado",
-     "ref": "rules: combat_retreat_stress + loot"
+     "ganha": "Mais saque extra depois de vencer batalhas (+25 pontos de chance)",
+     "paga": "Fugir estressa o dobro e só dá certo 50% das vezes (era 70%)",
+     "status": "pronto",
+     "ref": "sem_recuo",
+     "voto": "sim",
+     "receita": "# SEM RECUO: depois de vencer uma batalha, a chance de saque extra sobe 25 pontos (em qualquer luz);\n# em troca, fugir do combate estressa o DOBRO e é mais difícil (70% -> 50%).\n*darkness_overrides.loot|darkness_bonuses#battle|data#*|chance        +0.25   max 1.0\n*shared/rules|combat_retreat_stress                                   x2\n*shared/rules|combat_retreat_chance                                   =0.5",
+     "dlc": false
     },
     {
      "n": 25,
@@ -240,9 +274,280 @@
      "ganha": "(Crimson Court) A Sede aparece menos",
      "paga": "Quando vem, é mais forte",
      "status": "ideia",
-     "ref": "DLC Crimson Court: doença do Sangue"
+     "ref": "DLC Crimson Court: doença do Sangue",
+     "voto": "nao"
+    },
+    {
+     "n": 26,
+     "emoji": "🌟",
+     "nome": "Bugiganga Lendária",
+     "ganha": "Bugigangas raras, muito raras e ancestrais com +25% nos bônus",
+     "paga": "Os castigos delas também +25%",
+     "status": "achado",
+     "ref": "shared/buffs: TRINKET_* amount",
+     "voto": ""
+    },
+    {
+     "n": 27,
+     "emoji": "🧩",
+     "nome": "Conjunto Perfeito",
+     "ganha": "Bônus de CONJUNTO (ancestrais, Crimson Court, Shieldbreaker) em dobro",
+     "paga": "As peças custam mais na loja",
+     "status": "achado",
+     "ref": "trinkets: *.sets.trinkets.json",
+     "voto": ""
+    },
+    {
+     "n": 28,
+     "emoji": "👝",
+     "nome": "Terceiro Bolso",
+     "ganha": "3 bugigangas por herói (era 2) — experimental: a tela pode não mostrar",
+     "paga": "Bugigangas da loja 25% mais caras",
+     "status": "achado",
+     "ref": "inventory: hero_equipped_trinkets max_slots",
+     "voto": ""
+    },
+    {
+     "n": 29,
+     "emoji": "🏆",
+     "nome": "Troféu de Caçador",
+     "ganha": "Troféus de chefe com +50% nos bônus",
+     "paga": "Chefes com +15% de vida",
+     "status": "achado",
+     "ref": "shared/buffs + monsters",
+     "voto": ""
+    },
+    {
+     "n": 30,
+     "emoji": "🗝️",
+     "nome": "Caçador de Tesouros",
+     "ganha": "Baús dão saque extra mais vezes",
+     "paga": "Baús com mais armadilhas",
+     "status": "achado",
+     "ref": "loot: darkness_bonuses#chest + curios",
+     "voto": ""
+    },
+    {
+     "n": 31,
+     "emoji": "🏺",
+     "nome": "Herança Rica",
+     "ganha": "Relíquias (bustos, retratos, escrituras, brasões) em DOBRO nas masmorras",
+     "paga": "Ouro das masmorras -25%",
+     "status": "achado",
+     "ref": "loot: tabelas H e C",
+     "voto": ""
+    },
+    {
+     "n": 32,
+     "emoji": "🚪",
+     "nome": "Sala Secreta",
+     "ganha": "Salas secretas com muito mais tesouro",
+     "paga": "Aparecem menos",
+     "status": "achado",
+     "ref": "dungeons: secret_room_treasures",
+     "voto": ""
+    },
+    {
+     "n": 33,
+     "emoji": "🛒",
+     "nome": "Carroça do Nômade",
+     "ganha": "Loja de bugigangas com 24 itens (era 16)",
+     "paga": "Preços +25%",
+     "status": "achado",
+     "ref": "inventory: trinket_store + trinkets: price",
+     "voto": ""
+    },
+    {
+     "n": 34,
+     "emoji": "👹",
+     "nome": "Saque de Chefe",
+     "ganha": "Chefes soltam bugiganga rara garantida",
+     "paga": "Chefes mais fortes",
+     "status": "achado",
+     "ref": "loot: tabelas T_*",
+     "voto": ""
+    },
+    {
+     "n": 35,
+     "emoji": "🎖️",
+     "nome": "Veterano de Guerra",
+     "ganha": "Missões dão +50% de experiência",
+     "paga": "Heróis experientes recusam missões fáceis mais cedo",
+     "status": "achado",
+     "ref": "quest.generation: resolve_xp_table + roster",
+     "voto": ""
+    },
+    {
+     "n": 36,
+     "emoji": "📚",
+     "nome": "Escola de Heróis",
+     "ganha": "Habilidades de combate na Guilda custam metade",
+     "paga": "Exigem 1 nível de herói a mais",
+     "status": "achado",
+     "ref": "upgrades/heroes: árvores de habilidade",
+     "voto": ""
+    },
+    {
+     "n": 37,
+     "emoji": "🛡️",
+     "nome": "Herança do Ferreiro",
+     "ganha": "Arma e armadura iniciais já com o poder do nível 1",
+     "paga": "A primeira melhoria custa o dobro",
+     "status": "achado",
+     "ref": "heroes: weapon_0, armour_0 + upgrades",
+     "voto": ""
+    },
+    {
+     "n": 38,
+     "emoji": "🎯",
+     "nome": "Mestre de Ofício",
+     "ganha": "Habilidades no nível máximo: +5 de precisão e +3% de crítico",
+     "paga": "A última melhoria de habilidade custa mais",
+     "status": "achado",
+     "ref": "heroes: combat_skill @4",
+     "voto": ""
+    },
+    {
+     "n": 39,
+     "emoji": "🧬",
+     "nome": "Peculiaridade de Nascença",
+     "ganha": "Recrutas chegam com +1 peculiaridade boa",
+     "paga": "E +1 ruim",
+     "status": "achado",
+     "ref": "stage_coach: number_of_extra_*_quirks",
+     "voto": ""
+    },
+    {
+     "n": 40,
+     "emoji": "🎓",
+     "nome": "Talento Natural",
+     "ganha": "Recrutas com +1 habilidade de combate e +1 de acampamento",
+     "paga": "Chegam menos recrutas",
+     "status": "achado",
+     "ref": "stage_coach: number_of_extra_*_skills",
+     "voto": ""
+    },
+    {
+     "n": 41,
+     "emoji": "🏰",
+     "nome": "Elenco Gigante",
+     "ganha": "Elenco máximo +4 heróis em cada nível da Diligência",
+     "paga": "Melhorias da Diligência mais caras",
+     "status": "achado",
+     "ref": "stage_coach: roster_size_upgrades + upgrades",
+     "voto": ""
+    },
+    {
+     "n": 42,
+     "emoji": "📜",
+     "nome": "Missão Recompensadora",
+     "ganha": "Missões longas dão +1 bugiganga de recompensa",
+     "paga": "Missões longas ficam mais longas",
+     "status": "achado",
+     "ref": "quest.generation: rewards",
+     "voto": ""
+    },
+    {
+     "n": 43,
+     "emoji": "🔥",
+     "nome": "Bugiganga Evolutiva",
+     "ganha": "Bugigangas com cargas (Fire's Edge) duram o dobro",
+     "paga": "Aparecem menos",
+     "status": "achado",
+     "ref": "trinkets: trigger_limit",
+     "voto": ""
+    },
+    {
+     "n": 44,
+     "emoji": "🔭",
+     "nome": "Explorador Nato",
+     "ganha": "O batedor revela o mapa com mais chance",
+     "paga": "Monstros te surpreendem um pouco mais",
+     "status": "achado",
+     "ref": "shared/rules: darkness (scouting/surprised)",
+     "voto": ""
+    },
+    {
+     "n": 45,
+     "emoji": "🤝",
+     "nome": "Curiosidade Amiga",
+     "ganha": "Usar o item certo na curiosidade sempre dá o melhor resultado",
+     "paga": "Itens de suprimento mais raros no saque",
+     "status": "ideia",
+     "ref": "curios: Item Interactions (CSV)",
+     "voto": ""
+    },
+    {
+     "n": 46,
+     "emoji": "🏛️",
+     "nome": "Distritos Poderosos",
+     "ganha": "(Crimson Court) Bônus dos distritos maiores",
+     "paga": "Plantas mais caras",
+     "status": "ideia",
+     "ref": "DLC Crimson Court: districts",
+     "voto": ""
+    },
+    {
+     "n": 47,
+     "emoji": "☄️",
+     "nome": "Fragmento Brilhante",
+     "ganha": "(Color of Madness) Ondas do Cometa dão mais fragmentos",
+     "paga": "Ondas mais fortes",
+     "status": "ideia",
+     "ref": "DLC Color of Madness",
+     "voto": ""
+    },
+    {
+     "n": 48,
+     "emoji": "🎁",
+     "nome": "Kit Inicial",
+     "ganha": "Campanha nova começa com bugigangas extras",
+     "paga": "Ouro inicial menor",
+     "status": "ideia",
+     "ref": "trinkets: *.starting.trinkets.json",
+     "voto": ""
+    },
+    {
+     "n": 49,
+     "emoji": "🏋️",
+     "nome": "Treino na Cidade",
+     "ganha": "Heróis parados na cidade ganham um pouco de experiência",
+     "paga": "O estresse sobe um pouco na cidade",
+     "status": "ideia",
+     "ref": "(talvez no código)",
+     "voto": ""
+    },
+    {
+     "n": 50,
+     "emoji": "🗿",
+     "nome": "Busto do Fundador",
+     "ganha": "Relíquias trocadas no Câmbio às vezes rendem bugiganga rara",
+     "paga": "O Câmbio fecha em semanas alternadas",
+     "status": "ideia",
+     "ref": "heirloom_exchange",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": {
+    "nome": "ESCOLHIDOS",
+    "mods": [
+     "colecionador",
+     "peculiar_demais",
+     "curiosidade_mata",
+     "armeiro_generoso",
+     "diligencia_veteranos",
+     "sem_recuo"
+    ],
+    "nomes": [
+     "Colecionador de Relíquias",
+     "Peculiar Demais",
+     "Curiosidade Mata",
+     "Armeiro Generoso",
+     "Diligência de Veteranos",
+     "Sem Recuo"
+    ],
+    "pronto": true
+   }
   },
   {
    "id": "dd2",
@@ -261,6 +566,7 @@
      "paga": "Os lados ruins também somam",
      "status": "pronto",
      "ref": "bugiganga_gemea",
+     "voto": "",
      "receita": "# BUGIGANGA GÊMEA: pode ter 2 cópias da mesma bugiganga (era 1). Os lados ruins também somam.\nExcel/*|Item#trinket*|m_possessionLimit      x2",
      "dlc": false
     },
@@ -272,6 +578,7 @@
      "paga": "Vale para os inimigos também",
      "status": "pronto",
      "ref": "golpe_brutal",
+     "voto": "",
      "receita": "# GOLPE BRUTAL: crítico dá 2x o dano (era 1,5x) para TODOS — heróis e inimigos. Combates explosivos.\nExcel/*|Rules#combat|m_CritDamageMultiplications.2   =2.0",
      "dlc": false
     },
@@ -283,6 +590,7 @@
      "paga": "Brigas também",
      "status": "pronto",
      "ref": "lacos_de_sangue",
+     "voto": "",
      "receita": "# LAÇOS DE SANGUE: as relações entre heróis mudam o dobro mais rápido, para o bem e para o mal.\nExcel/*|Rules#affinity|m_SkillModifierChanceBase        x2\nExcel/*|Rules#affinity|m_SkillModifierChancePerSkillUse x2",
      "dlc": false
     },
@@ -294,6 +602,7 @@
      "paga": "A corrida começa com metade do ouro",
      "status": "pronto",
      "ref": "carroca_de_carga",
+     "voto": "",
      "receita": "# CARROÇA DE CARGA: inventário com 28 espaços (era 20), mas cada corrida começa com metade do ouro.\nExcel/*|Rules#inventory|m_defaultSize   =28\nExcel/*|Rules#run|m_StartingGold        x0.5",
      "dlc": false
     },
@@ -305,6 +614,7 @@
      "paga": "Bugigangas 30% mais caras",
      "status": "pronto",
      "ref": "terceiro_bolso",
+     "voto": "",
      "receita": "# TERCEIRO BOLSO (EXPERIMENTAL: a tela pode não mostrar o 3º espaço): 3 bugigangas por herói, mas as bugigangas\n# custam 30% mais na Estalagem.\nExcel/*|Rules#hero|m_TrinketNumberOfSlots       =3\nExcel/*|Cost#trinket*_buy_cost|m_ItemQty        x1.3",
      "dlc": false
     },
@@ -315,7 +625,8 @@
      "ganha": "Herói equipa 6 habilidades de combate (era 5) — experimental",
      "paga": "Inimigos com +10% de vida",
      "status": "achado",
-     "ref": "ActorDataClass: m_EquippedCombatSkillLimit"
+     "ref": "ActorDataClass: m_EquippedCombatSkillLimit",
+     "voto": ""
     },
     {
      "n": 7,
@@ -324,7 +635,8 @@
      "ganha": "6 espaços de Memória (era 5)",
      "paga": "Memórias mais caras no Altar",
      "status": "achado",
-     "ref": "Rules#hero: m_MemoryNumberOfSlots"
+     "ref": "Rules#hero: m_MemoryNumberOfSlots",
+     "voto": ""
     },
     {
      "n": 8,
@@ -333,7 +645,8 @@
      "ganha": "Curar e travar peculiaridades custa metade",
      "paga": "Remover as ruins custa o dobro",
      "status": "achado",
-     "ref": "Rules#hero: m_*QuirkByTagCosts"
+     "ref": "Rules#hero: m_*QuirkByTagCosts",
+     "voto": ""
     },
     {
      "n": 9,
@@ -342,7 +655,8 @@
      "ganha": "Ordem dos turnos imprevisível (rolagem 0-10)",
      "paga": "Para os inimigos também",
      "status": "achado",
-     "ref": "Rules#combat: m_TurnOrderSpeedRoll*"
+     "ref": "Rules#combat: m_TurnOrderSpeedRoll*",
+     "voto": ""
     },
     {
      "n": 10,
@@ -351,7 +665,8 @@
      "ganha": "+25% de vida máxima",
      "paga": "-1 de velocidade",
      "status": "achado",
-     "ref": "ActorDataStats: add_stats.health_max, speed"
+     "ref": "ActorDataStats: add_stats.health_max, speed",
+     "voto": ""
     },
     {
      "n": 11,
@@ -360,7 +675,8 @@
      "ganha": "Resistências +15%",
      "paga": "Estresse máximo menor",
      "status": "achado",
-     "ref": "ActorDataStats: sub_stat.resistance.*, stress_max"
+     "ref": "ActorDataStats: sub_stat.resistance.*, stress_max",
+     "voto": ""
     },
     {
      "n": 12,
@@ -369,7 +685,8 @@
      "ganha": "Fim de batalha cura até 40% (era 20%)",
      "paga": "Inimigos 15% mais fortes",
      "status": "achado",
-     "ref": "Rules#combat: m_BattleEndMinHealthHealUpToPercent"
+     "ref": "Rules#combat: m_BattleEndMinHealthHealUpToPercent",
+     "voto": ""
     },
     {
      "n": 13,
@@ -378,7 +695,8 @@
      "ganha": "1 espaço de bicho de estimação e +1 de troféu",
      "paga": "Reparos da diligência mais caros",
      "status": "achado",
-     "ref": "Rules#stage_coach: m_PetNumberOfSlots, m_TrophyNumberOfSlots"
+     "ref": "Rules#stage_coach: m_PetNumberOfSlots, m_TrophyNumberOfSlots",
+     "voto": ""
     },
     {
      "n": 14,
@@ -387,7 +705,8 @@
      "ganha": "Itens da loja mais baratos",
      "paga": "Loja com menos unidades",
      "status": "achado",
-     "ref": "Cost: m_ItemQty + LootTable"
+     "ref": "Cost: m_ItemQty + LootTable",
+     "voto": ""
     },
     {
      "n": 15,
@@ -396,7 +715,8 @@
      "ganha": "Pilhas maiores de itens de combate",
      "paga": "4 espaços a menos no inventário",
      "status": "achado",
-     "ref": "Item: m_maxQty + Rules#inventory"
+     "ref": "Item: m_maxQty + Rules#inventory",
+     "voto": ""
     },
     {
      "n": 16,
@@ -405,7 +725,8 @@
      "ganha": "Começa a corrida com 80 de ouro (era 40)",
      "paga": "Lojas 25% mais caras",
      "status": "achado",
-     "ref": "Rules#run: m_StartingGold + Cost"
+     "ref": "Rules#run: m_StartingGold + Cost",
+     "voto": ""
     },
     {
      "n": 17,
@@ -414,7 +735,8 @@
      "ganha": "A tocha cai mais devagar",
      "paga": "Menos bônus de saque com tocha alta",
      "status": "achado",
-     "ref": "TorchLevel"
+     "ref": "TorchLevel",
+     "voto": ""
     },
     {
      "n": 18,
@@ -423,7 +745,8 @@
      "ganha": "Melhorias de Estalagem mais baratas",
      "paga": "Itens da Estalagem duram menos",
      "status": "achado",
-     "ref": "InnUpgrade + Cost"
+     "ref": "InnUpgrade + Cost",
+     "voto": ""
     },
     {
      "n": 19,
@@ -432,7 +755,8 @@
      "ganha": "Heróis começam com afinidade alta (14, era 9)",
      "paga": "Relações mudam mais devagar depois",
      "status": "achado",
-     "ref": "Rules#affinity: m_LeaningStart"
+     "ref": "Rules#affinity: m_LeaningStart",
+     "voto": ""
     },
     {
      "n": 20,
@@ -441,7 +765,8 @@
      "ganha": "Crítico com sangramento/queimadura dura +1 rodada",
      "paga": "Vale para os inimigos também",
      "status": "achado",
-     "ref": "Rules#combat: m_CritDotExtraDuration"
+     "ref": "Rules#combat: m_CritDotExtraDuration",
+     "voto": ""
     },
     {
      "n": 21,
@@ -450,7 +775,8 @@
      "ganha": "Ordem dos turnos sem sorte: só a velocidade decide",
      "paga": "Inimigos rápidos sempre jogam antes",
      "status": "achado",
-     "ref": "Rules#combat: m_TurnOrderSpeedRollRange*"
+     "ref": "Rules#combat: m_TurnOrderSpeedRollRange*",
+     "voto": ""
     },
     {
      "n": 22,
@@ -459,7 +785,8 @@
      "ganha": "Resistência à morte +10%",
      "paga": "-10% de vida máxima",
      "status": "achado",
-     "ref": "ActorDataStats: sub_stat.resistance.death"
+     "ref": "ActorDataStats: sub_stat.resistance.death",
+     "voto": ""
     },
     {
      "n": 23,
@@ -468,7 +795,8 @@
      "ganha": "Chefes soltam bugigangas raras com mais chance",
      "paga": "Chefes com +25% de vida",
      "status": "achado",
-     "ref": "LootTable + ActorDataStats"
+     "ref": "LootTable + ActorDataStats",
+     "voto": ""
     },
     {
      "n": 24,
@@ -477,7 +805,8 @@
      "ganha": "Cura 20% entre os pontos do mapa (era 10%)",
      "paga": "Estresse máximo menor",
      "status": "achado",
-     "ref": "ActorDataStats: add_stats.health_heal_percent_between_nodes"
+     "ref": "ActorDataStats: add_stats.health_heal_percent_between_nodes",
+     "voto": ""
     },
     {
      "n": 25,
@@ -486,9 +815,11 @@
      "ganha": "Ganha peculiaridades com mais frequência",
      "paga": "Boas e ruins",
      "status": "ideia",
-     "ref": "Quirk"
+     "ref": "Quirk",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": null
   },
   {
    "id": "gk",
@@ -506,7 +837,8 @@
      "ganha": "Ações gastam 30% menos energia",
      "paga": "Levam 20% mais tempo",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 2,
@@ -515,7 +847,8 @@
      "ganha": "Cadáveres com mais caveiras brancas (melhores)",
      "paga": "Apodrecem mais rápido",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 3,
@@ -524,7 +857,8 @@
      "ganha": "A missa rende mais fé e moedas",
      "paga": "Só com cemitério bonito",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 4,
@@ -533,7 +867,8 @@
      "ganha": "Ferramentas duram o dobro",
      "paga": "Custam mais material",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 5,
@@ -542,7 +877,8 @@
      "ganha": "Mais pontos vermelhos/verdes/azuis por ação",
      "paga": "Pesquisas mais caras no fim da árvore",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 6,
@@ -551,7 +887,8 @@
      "ganha": "O burro entrega mais corpos por dia",
      "paga": "Pede cenoura como pagamento",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 7,
@@ -560,7 +897,8 @@
      "ganha": "Vende tudo 50% mais caro",
      "paga": "Compra também 50% mais caro",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 8,
@@ -569,7 +907,8 @@
      "ganha": "Receitas de alquimia rendem 2 unidades",
      "paga": "Usam um ingrediente a mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 9,
@@ -578,7 +917,8 @@
      "ganha": "O dia dura mais",
      "paga": "Dormir recupera menos energia",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 10,
@@ -587,7 +927,8 @@
      "ganha": "Túmulos e enfeites valem mais qualidade",
      "paga": "Custam mais pedra e madeira",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 11,
@@ -596,7 +937,8 @@
      "ganha": "Peixe raro cai mais",
      "paga": "A vara quebra mais rápido",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 12,
@@ -605,7 +947,8 @@
      "ganha": "Comida recupera mais energia",
      "paga": "Ingredientes estragam mais rápido",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 13,
@@ -614,7 +957,8 @@
      "ganha": "Inimigos soltam mais itens",
      "paga": "Têm mais vida",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 14,
@@ -623,7 +967,8 @@
      "ganha": "Mesas de trabalho produzem mais rápido",
      "paga": "Gastam mais carvão e lenha",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 15,
@@ -632,7 +977,8 @@
      "ganha": "Missões dos personagens dão mais amizade",
      "paga": "Pedem mais itens",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 16,
@@ -641,7 +987,8 @@
      "ganha": "Trabalhadores zumbis mais rápidos",
      "paga": "Se desfazem mais cedo",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 17,
@@ -650,7 +997,8 @@
      "ganha": "Bônus dos dias da semana maiores",
      "paga": "Os dias ruins pesam mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 18,
@@ -659,7 +1007,8 @@
      "ganha": "Cervejaria e vinho rendem mais",
      "paga": "Ingredientes mais caros",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 19,
@@ -668,7 +1017,8 @@
      "ganha": "Mais pedra e mármore por golpe",
      "paga": "Picareta gasta mais rápido",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 20,
@@ -677,7 +1027,8 @@
      "ganha": "Colheita maior",
      "paga": "Sementes mais caras",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 21,
@@ -686,7 +1037,8 @@
      "ganha": "Fogueira da Inquisição dá mais fé",
      "paga": "Exige mais preparação",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 22,
@@ -695,7 +1047,8 @@
      "ganha": "Escrever e pesquisar dá mais pontos azuis",
      "paga": "Papel e tinta mais caros",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 23,
@@ -704,7 +1057,8 @@
      "ganha": "Remover partes dá itens melhores",
      "paga": "Sai mais lixo também",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 24,
@@ -713,7 +1067,8 @@
      "ganha": "Mais itens à venda",
      "paga": "Preços oscilam mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 25,
@@ -722,9 +1077,11 @@
      "ganha": "Mais eventos e recompensas à noite",
      "paga": "Mais perigo à noite",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": null
   },
   {
    "id": "hades",
@@ -742,7 +1099,8 @@
      "ganha": "Mais bênçãos Épicas, Heroicas e Duplas",
      "paga": "Caronte cobra mais caro",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 2,
@@ -751,7 +1109,8 @@
      "ganha": "4 opções de bênção (era 3)",
      "paga": "Menos Romãs de Poder",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 3,
@@ -760,7 +1119,8 @@
      "ganha": "Portais do Caos mais frequentes e baratos",
      "paga": "As maldições duram mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 4,
@@ -769,7 +1129,8 @@
      "ganha": "+1 Desafio da Morte",
      "paga": "Inimigos do Elísio e de Estige mais fortes",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 5,
@@ -778,7 +1139,8 @@
      "ganha": "Trocar de lembrança em todas as salas",
      "paga": "Lembranças sobem de nível mais devagar",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 6,
@@ -787,7 +1149,8 @@
      "ganha": "Aspectos das armas fortes já no nível 1",
      "paga": "Sangue de Titã rende menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 7,
@@ -796,7 +1159,8 @@
      "ganha": "Romã de Poder sobe 2 níveis",
      "paga": "Aparece menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 8,
@@ -805,7 +1169,8 @@
      "ganha": "Dano em DOBRO",
      "paga": "Metade da vida",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 9,
@@ -814,7 +1179,8 @@
      "ganha": "Salas dão mais óbolos",
      "paga": "Loja com menos itens",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 10,
@@ -823,7 +1189,8 @@
      "ganha": "+1 dash e mais rápido",
      "paga": "Ataque especial mais fraco",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 11,
@@ -832,7 +1199,8 @@
      "ganha": "Pacto da Punição dá mais Escuridão, Gemas e Chaves",
      "paga": "As punições continuam valendo",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 12,
@@ -841,7 +1209,8 @@
      "ganha": "Bênçãos do mesmo deus mais fortes",
      "paga": "Outros deuses aparecem menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 13,
@@ -850,7 +1219,8 @@
      "ganha": "Elites soltam recompensa extra",
      "paga": "Mais Elites e mini-chefes",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 14,
@@ -859,7 +1229,8 @@
      "ganha": "Talentos do Espelho custam metade",
      "paga": "Têm menos níveis",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 15,
@@ -868,7 +1239,8 @@
      "ganha": "Escolhe 2 Martelos de Dédalo por vez",
      "paga": "O martelo aparece menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 16,
@@ -877,7 +1249,8 @@
      "ganha": "Quebrar armadura solta ouro",
      "paga": "Todos os inimigos têm armadura",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 17,
@@ -886,7 +1259,8 @@
      "ganha": "Começa com 2 Gemas de Sangue (Cast)",
      "paga": "Voltam mais devagar",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 18,
@@ -895,7 +1269,8 @@
      "ganha": "A barra de Chamado enche 2x mais rápido",
      "paga": "Chamados mais fracos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 19,
@@ -904,7 +1279,8 @@
      "ganha": "Hermes aparece mais",
      "paga": "Outros deuses um pouco menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 20,
@@ -913,7 +1289,8 @@
      "ganha": "Itens do Poço de Caronte mais fortes",
      "paga": "Duram menos salas",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 21,
@@ -922,7 +1299,8 @@
      "ganha": "Chefe do Tártaro solta uma Chave extra",
      "paga": "Tem mais vida",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 22,
@@ -931,7 +1309,8 @@
      "ganha": "Sísifo, Eurídice e Pátroclo aparecem mais",
      "paga": "Menos salas de recompensa",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 23,
@@ -940,7 +1319,8 @@
      "ganha": "Começa com 100 óbolos",
      "paga": "Cada sala dá menos",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 24,
@@ -949,7 +1329,8 @@
      "ganha": "Mais salas de desafio com recompensa maior",
      "paga": "Mais difíceis",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 25,
@@ -958,9 +1339,11 @@
      "ganha": "Recompensas de sala sorteadas e maiores",
      "paga": "Você não escolhe a porta",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": null
   },
   {
    "id": "p5r",
@@ -978,7 +1361,8 @@
      "ganha": "Inimigos dão mais dinheiro",
      "paga": "Lojas cobram mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 2,
@@ -987,7 +1371,8 @@
      "ganha": "Personas fundidas com +2 níveis",
      "paga": "A fusão custa mais no Compêndio",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 3,
@@ -996,7 +1381,8 @@
      "ganha": "Armas de fogo com mais balas e dano",
      "paga": "As melhores ficam mais caras",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 4,
@@ -1005,7 +1391,8 @@
      "ganha": "Mementos dá mais experiência e itens",
      "paga": "Inimigos mais fortes",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 5,
@@ -1014,7 +1401,8 @@
      "ganha": "Acessórios com atributos maiores",
      "paga": "Lojas vendem menos unidades",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 6,
@@ -1023,7 +1411,8 @@
      "ganha": "Dano de fraqueza e crítico maior",
      "paga": "Para os dois lados",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 7,
@@ -1032,7 +1421,8 @@
      "ganha": "Habilidades mágicas 30% mais fortes",
      "paga": "Gastam mais SP",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 8,
@@ -1041,7 +1431,8 @@
      "ganha": "Golpes físicos mais fortes",
      "paga": "Gastam mais vida",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 9,
@@ -1050,7 +1441,8 @@
      "ganha": "Conversa com Shadows dá mais itens e dinheiro",
      "paga": "Elas fogem mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 10,
@@ -1059,7 +1451,8 @@
      "ganha": "Emboscada dá mais vantagem",
      "paga": "Ser pego é pior",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 11,
@@ -1068,7 +1461,8 @@
      "ganha": "Cartas de habilidade mais baratas",
      "paga": "Mais raras de cair",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 12,
@@ -1077,7 +1471,8 @@
      "ganha": "Chefes dão mais experiência",
      "paga": "Mais vida e uma habilidade a mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 13,
@@ -1086,7 +1481,8 @@
      "ganha": "Atributos variam +-20% a cada fusão",
      "paga": "Pode sair pior",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 14,
@@ -1095,7 +1491,8 @@
      "ganha": "Estatísticas sociais sobem mais rápido",
      "paga": "O calendário continua igual (talvez no código)",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 15,
@@ -1104,7 +1501,8 @@
      "ganha": "Armaduras mais fortes",
      "paga": "Tiram agilidade",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 16,
@@ -1113,7 +1511,8 @@
      "ganha": "Passar o turno (Baton Pass) dá mais bônus",
      "paga": "Inimigos com menos fraquezas",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 17,
@@ -1122,7 +1521,8 @@
      "ganha": "Ataques especiais em dupla aparecem mais",
      "paga": "Causam um pouco menos de dano",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 18,
@@ -1131,7 +1531,8 @@
      "ganha": "Itens de cura curam mais",
      "paga": "Custam mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 19,
@@ -1140,7 +1541,8 @@
      "ganha": "Inimigos dão mais experiência",
      "paga": "Têm menos fraquezas",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 20,
@@ -1149,7 +1551,8 @@
      "ganha": "Mais baús em Mementos",
      "paga": "Baús com armadilha",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 21,
@@ -1158,7 +1561,8 @@
      "ganha": "Atributos das Personas +10%",
      "paga": "Fusões mais caras",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 22,
@@ -1167,7 +1571,8 @@
      "ganha": "Reserva ganha 100% da experiência",
      "paga": "Menos dinheiro por luta",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 23,
@@ -1176,7 +1581,8 @@
      "ganha": "Shadows soltam mais itens",
      "paga": "Têm mais agilidade",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 24,
@@ -1185,7 +1591,8 @@
      "ganha": "Armas melhores caem de Shadows",
      "paga": "Mais raras na loja",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     },
     {
      "n": 25,
@@ -1194,9 +1601,11 @@
      "ganha": "Habilidades de cura gastam menos SP",
      "paga": "As de ataque gastam mais",
      "status": "ideia",
-     "ref": ""
+     "ref": "",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": null
   },
   {
    "id": "bg",
@@ -1214,7 +1623,8 @@
      "ganha": "Toda classe chega a Grão-Mestre em armas",
      "paga": "Inimigos guerreiros também mais treinados",
      "status": "ideia",
-     "ref": "WSPECIAL.2DA"
+     "ref": "WSPECIAL.2DA",
+     "voto": ""
     },
     {
      "n": 2,
@@ -1223,7 +1633,8 @@
      "ganha": "Pilhas maiores de poções, flechas e gemas",
      "paga": "Peso conta mais",
      "status": "ideia",
-     "ref": "ITM: tamanho da pilha"
+     "ref": "ITM: tamanho da pilha",
+     "voto": ""
     },
     {
      "n": 3,
@@ -1232,7 +1643,8 @@
      "ganha": "+1 espaço de magia por círculo",
      "paga": "Magos inimigos também ganham",
      "status": "ideia",
-     "ref": "MXSPLWIZ.2DA"
+     "ref": "MXSPLWIZ.2DA",
+     "voto": ""
     },
     {
      "n": 4,
@@ -1241,7 +1653,8 @@
      "ganha": "Kits e multiclasse para mais raças",
      "paga": "Atributos mínimos mais altos",
      "status": "ideia",
-     "ref": "CLSRCREQ.2DA"
+     "ref": "CLSRCREQ.2DA",
+     "voto": ""
     },
     {
      "n": 5,
@@ -1250,7 +1663,8 @@
      "ganha": "Armas +1/+2 viram +2/+3",
      "paga": "Lojas cobram mais",
      "status": "ideia",
-     "ref": "ITM"
+     "ref": "ITM",
+     "voto": ""
     },
     {
      "n": 6,
@@ -1259,7 +1673,8 @@
      "ganha": "Ressurreição mais barata",
      "paga": "Quem morre perde um pouco de experiência",
      "status": "ideia",
-     "ref": "STO (templos)"
+     "ref": "STO (templos)",
+     "voto": ""
     },
     {
      "n": 7,
@@ -1268,7 +1683,8 @@
      "ganha": "Limite de experiência maior no BG1",
      "paga": "Inimigos do fim mais fortes",
      "status": "ideia",
-     "ref": "XPCAP.2DA"
+     "ref": "XPCAP.2DA",
+     "voto": ""
     },
     {
      "n": 8,
@@ -1277,7 +1693,8 @@
      "ganha": "Dados de vida maiores por nível",
      "paga": "Inimigos com +20% de vida",
      "status": "ideia",
-     "ref": "HPCLASS"
+     "ref": "HPCLASS",
+     "voto": ""
     },
     {
      "n": 9,
@@ -1286,7 +1703,8 @@
      "ganha": "Mais pontos de ladrão por nível",
      "paga": "Armadilhas mais mortais",
      "status": "ideia",
-     "ref": "2DA de ladrão"
+     "ref": "2DA de ladrão",
+     "voto": ""
     },
     {
      "n": 10,
@@ -1295,7 +1713,8 @@
      "ganha": "Magias com mais dano",
      "paga": "Inimigos resistem mais à magia",
      "status": "ideia",
-     "ref": "SPL"
+     "ref": "SPL",
+     "voto": ""
     },
     {
      "n": 11,
@@ -1304,7 +1723,8 @@
      "ganha": "Lojas pagam mais pelo que você vende",
      "paga": "Vendem mais caro",
      "status": "ideia",
-     "ref": "STO"
+     "ref": "STO",
+     "voto": ""
     },
     {
      "n": 12,
@@ -1313,7 +1733,8 @@
      "ganha": "Descansar na estrada cura mais",
      "paga": "Emboscada mais provável",
      "status": "ideia",
-     "ref": "2DA de descanso"
+     "ref": "2DA de descanso",
+     "voto": ""
     },
     {
      "n": 13,
@@ -1322,7 +1743,8 @@
      "ganha": "Companheiros com atributos melhores",
      "paga": "Chefes também",
      "status": "ideia",
-     "ref": "CRE"
+     "ref": "CRE",
+     "voto": ""
     },
     {
      "n": 14,
@@ -1331,7 +1753,8 @@
      "ganha": "Arcos e bestas com +1 ataque por rodada",
      "paga": "Flechas mais caras",
      "status": "ideia",
-     "ref": "ITM"
+     "ref": "ITM",
+     "voto": ""
     },
     {
      "n": 15,
@@ -1340,7 +1763,8 @@
      "ganha": "Tesouro a mais no covil",
      "paga": "Dragões com mais vida e magias",
      "status": "ideia",
-     "ref": "CRE"
+     "ref": "CRE",
+     "voto": ""
     },
     {
      "n": 16,
@@ -1349,7 +1773,8 @@
      "ganha": "Ficha com rolagens melhores",
      "paga": "Inimigos com atributos melhores",
      "status": "ideia",
-     "ref": "2DA de criação"
+     "ref": "2DA de criação",
+     "voto": ""
     },
     {
      "n": 17,
@@ -1358,7 +1783,8 @@
      "ganha": "Crítico em 19-20 para o grupo",
      "paga": "Inimigos também",
      "status": "ideia",
-     "ref": "ITM/SPL"
+     "ref": "ITM/SPL",
+     "voto": ""
     },
     {
      "n": 18,
@@ -1367,7 +1793,8 @@
      "ganha": "(BG2) Surtos selvagens mais frequentes e mais fortes",
      "paga": "Mais imprevisível",
      "status": "ideia",
-     "ref": "WILDMAG"
+     "ref": "WILDMAG",
+     "voto": ""
     },
     {
      "n": 19,
@@ -1376,7 +1803,8 @@
      "ganha": "Imposição de mãos cura mais",
      "paga": "Usos por dia menores",
      "status": "ideia",
-     "ref": "SPL"
+     "ref": "SPL",
+     "voto": ""
     },
     {
      "n": 20,
@@ -1385,7 +1813,8 @@
      "ganha": "Formas animais mais fortes",
      "paga": "Duram menos",
      "status": "ideia",
-     "ref": "SPL/CRE"
+     "ref": "SPL/CRE",
+     "voto": ""
     },
     {
      "n": 21,
@@ -1394,7 +1823,8 @@
      "ganha": "Encontros soltam mais ouro",
      "paga": "Lojas 30% mais caras",
      "status": "ideia",
-     "ref": "CRE/STO"
+     "ref": "CRE/STO",
+     "voto": ""
     },
     {
      "n": 22,
@@ -1403,7 +1833,8 @@
      "ganha": "Copiar magias nunca falha",
      "paga": "Custa mais ouro",
      "status": "ideia",
-     "ref": "2DA de inteligência"
+     "ref": "2DA de inteligência",
+     "voto": ""
     },
     {
      "n": 23,
@@ -1412,7 +1843,8 @@
      "ganha": "Canção do bardo com bônus maior",
      "paga": "Bardo luta pior",
      "status": "ideia",
-     "ref": "SPL"
+     "ref": "SPL",
+     "voto": ""
     },
     {
      "n": 24,
@@ -1421,7 +1853,8 @@
      "ganha": "Mais experiência por encontro",
      "paga": "Mais inimigos por encontro",
      "status": "ideia",
-     "ref": "ARE/CRE"
+     "ref": "ARE/CRE",
+     "voto": ""
     },
     {
      "n": 25,
@@ -1430,9 +1863,11 @@
      "ganha": "O cansaço demora mais a chegar",
      "paga": "Estalagens mais caras",
      "status": "ideia",
-     "ref": "STO + 2DA"
+     "ref": "STO + 2DA",
+     "voto": ""
     }
-   ]
+   ],
+   "pacote": null
   }
  ]
 }
