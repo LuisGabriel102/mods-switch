@@ -576,7 +576,7 @@
    "emoji": "🛞",
    "cor": "#c2571a",
    "tid": "0100E5E01C098000",
-   "resumo": "A viagem de diligência até a Montanha, com relações entre heróis. DLCs: Binding Blade, Inhuman Bondage, Infernal Supporter, Hero Origin.",
+   "resumo": "Mais difícil que o 1: aqui o \"você paga\" é sempre LEVE. A viagem de diligência até a Montanha, com relações entre heróis. DLCs: Binding Blade, Inhuman Bondage, Infernal Supporter, Hero Origin.",
    "dados": "Uma planilha do jogo (merged.Group.csv) em pedaços: 75.478 valores que o motor sabe mudar.",
    "mods": [
     {
@@ -584,7 +584,7 @@
      "emoji": "💎",
      "nome": "Bugiganga Gêmea",
      "ganha": "Ter 2 cópias da mesma bugiganga (212 bugigangas)",
-     "paga": "Os lados ruins também somam",
+     "paga": "Os lados ruins também somam (só nas cópias iguais)",
      "status": "pronto",
      "ref": "bugiganga_gemea",
      "voto": "",
@@ -608,7 +608,7 @@
      "emoji": "🤝",
      "nome": "Laços de Sangue",
      "ganha": "Amizades se formam 2x mais rápido",
-     "paga": "Brigas também",
+     "paga": "Brigas também podem surgir mais rápido",
      "status": "pronto",
      "ref": "lacos_de_sangue",
      "voto": "",
@@ -620,11 +620,11 @@
      "emoji": "🛒",
      "nome": "Carroça de Carga",
      "ganha": "Inventário de 28 espaços (era 20)",
-     "paga": "A corrida começa com metade do ouro",
+     "paga": "A corrida começa com 20% menos ouro (era metade)",
      "status": "pronto",
      "ref": "carroca_de_carga",
      "voto": "",
-     "receita": "# CARROÇA DE CARGA: inventário com 28 espaços (era 20), mas cada corrida começa com metade do ouro.\nExcel/*|Rules#inventory|m_defaultSize   =28\nExcel/*|Rules#run|m_StartingGold        x0.5",
+     "receita": "# CARROÇA DE CARGA: inventário com 28 espaços (era 20); em troca, a corrida começa com 20% menos ouro (era metade).\nExcel/*|Rules#inventory|m_defaultSize   =28\nExcel/*|Rules#run|m_StartingGold        x0.8",
      "dlc": false
     },
     {
@@ -632,11 +632,11 @@
      "emoji": "👝",
      "nome": "Terceiro Bolso",
      "ganha": "3 bugigangas por herói (era 2) — EXPERIMENTAL",
-     "paga": "Bugigangas 30% mais caras",
+     "paga": "Bugigangas só 10% mais caras na Estalagem",
      "status": "pronto",
      "ref": "terceiro_bolso",
      "voto": "",
-     "receita": "# TERCEIRO BOLSO (EXPERIMENTAL: a tela pode não mostrar o 3º espaço): 3 bugigangas por herói, mas as bugigangas\n# custam 30% mais na Estalagem.\nExcel/*|Rules#hero|m_TrinketNumberOfSlots       =3\nExcel/*|Cost#trinket*_buy_cost|m_ItemQty        x1.3",
+     "receita": "# TERCEIRO BOLSO (EXPERIMENTAL: a tela pode não mostrar o 3º espaço): 3 bugigangas por herói; em troca, as\n# bugigangas custam só 10% mais na Estalagem (era 30%).\nExcel/*|Rules#hero|m_TrinketNumberOfSlots       =3\nExcel/*|Cost#trinket*_buy_cost|m_ItemQty        x1.1",
      "dlc": false
     },
     {
@@ -644,7 +644,7 @@
      "emoji": "🗡️",
      "nome": "Seis Golpes",
      "ganha": "Herói equipa 6 habilidades de combate (era 5) — experimental",
-     "paga": "Inimigos com +10% de vida",
+     "paga": "Inimigos com +5% de vida",
      "status": "achado",
      "ref": "ActorDataClass: m_EquippedCombatSkillLimit",
      "voto": ""
@@ -654,7 +654,7 @@
      "emoji": "🧠",
      "nome": "Memória Longa",
      "ganha": "6 espaços de Memória (era 5)",
-     "paga": "Memórias mais caras no Altar",
+     "paga": "Memórias 10% mais caras no Altar",
      "status": "achado",
      "ref": "Rules#hero: m_MemoryNumberOfSlots",
      "voto": ""
@@ -664,7 +664,7 @@
      "emoji": "🩺",
      "nome": "Médico de Campo",
      "ganha": "Curar e travar peculiaridades custa metade",
-     "paga": "Remover as ruins custa o dobro",
+     "paga": "Remover peculiaridade ruim custa 25% mais",
      "status": "achado",
      "ref": "Rules#hero: m_*QuirkByTagCosts",
      "voto": ""
@@ -674,7 +674,7 @@
      "emoji": "🎲",
      "nome": "Velocidade Caótica",
      "ganha": "Ordem dos turnos imprevisível (rolagem 0-10)",
-     "paga": "Para os inimigos também",
+     "paga": "A rolagem é só um pouco maior (0-8): imprevisível, mas não demais",
      "status": "achado",
      "ref": "Rules#combat: m_TurnOrderSpeedRoll*",
      "voto": ""
@@ -684,7 +684,7 @@
      "emoji": "❤️",
      "nome": "Vida de Ferro",
      "ganha": "+25% de vida máxima",
-     "paga": "-1 de velocidade",
+     "paga": "Inimigos com +5% de vida (sem perder velocidade)",
      "status": "achado",
      "ref": "ActorDataStats: add_stats.health_max, speed",
      "voto": ""
@@ -694,7 +694,7 @@
      "emoji": "🧱",
      "nome": "Mente Frágil, Corpo Forte",
      "ganha": "Resistências +15%",
-     "paga": "Estresse máximo menor",
+     "paga": "Estresse máximo só 5% menor",
      "status": "achado",
      "ref": "ActorDataStats: sub_stat.resistance.*, stress_max",
      "voto": ""
@@ -704,7 +704,7 @@
      "emoji": "🌿",
      "nome": "Respiro Pós-Batalha",
      "ganha": "Fim de batalha cura até 40% (era 20%)",
-     "paga": "Inimigos 15% mais fortes",
+     "paga": "Inimigos só 5% mais fortes",
      "status": "achado",
      "ref": "Rules#combat: m_BattleEndMinHealthHealUpToPercent",
      "voto": ""
@@ -714,7 +714,7 @@
      "emoji": "🐾",
      "nome": "Carroça do Zoológico",
      "ganha": "1 espaço de bicho de estimação e +1 de troféu",
-     "paga": "Reparos da diligência mais caros",
+     "paga": "Reparos da diligência 10% mais caros",
      "status": "achado",
      "ref": "Rules#stage_coach: m_PetNumberOfSlots, m_TrophyNumberOfSlots",
      "voto": ""
@@ -724,7 +724,7 @@
      "emoji": "🏴",
      "nome": "Mercado Negro",
      "ganha": "Itens da loja mais baratos",
-     "paga": "Loja com menos unidades",
+     "paga": "A loja tem 1 item a menos",
      "status": "achado",
      "ref": "Cost: m_ItemQty + LootTable",
      "voto": ""
@@ -734,7 +734,7 @@
      "emoji": "🧪",
      "nome": "Coleção Completa",
      "ganha": "Pilhas maiores de itens de combate",
-     "paga": "4 espaços a menos no inventário",
+     "paga": "1 espaço a menos no inventário (era 4)",
      "status": "achado",
      "ref": "Item: m_maxQty + Rules#inventory",
      "voto": ""
@@ -744,7 +744,7 @@
      "emoji": "🪙",
      "nome": "Ouro de Partida",
      "ganha": "Começa a corrida com 80 de ouro (era 40)",
-     "paga": "Lojas 25% mais caras",
+     "paga": "Lojas só 10% mais caras",
      "status": "achado",
      "ref": "Rules#run: m_StartingGold + Cost",
      "voto": ""
@@ -754,7 +754,7 @@
      "emoji": "🔦",
      "nome": "Tocha Forte",
      "ganha": "A tocha cai mais devagar",
-     "paga": "Menos bônus de saque com tocha alta",
+     "paga": "O bônus de saque com tocha alta cai um pouco",
      "status": "achado",
      "ref": "TorchLevel",
      "voto": ""
@@ -764,7 +764,7 @@
      "emoji": "🏨",
      "nome": "Estalagem de Luxo",
      "ganha": "Melhorias de Estalagem mais baratas",
-     "paga": "Itens da Estalagem duram menos",
+     "paga": "Itens da Estalagem duram um pouco menos",
      "status": "achado",
      "ref": "InnUpgrade + Cost",
      "voto": ""
@@ -774,7 +774,7 @@
      "emoji": "👫",
      "nome": "Amigos de Infância",
      "ganha": "Heróis começam com afinidade alta (14, era 9)",
-     "paga": "Relações mudam mais devagar depois",
+     "paga": "As relações mudam um pouco mais devagar depois",
      "status": "achado",
      "ref": "Rules#affinity: m_LeaningStart",
      "voto": ""
@@ -784,7 +784,7 @@
      "emoji": "🔥",
      "nome": "Chama Persistente",
      "ganha": "Crítico com sangramento/queimadura dura +1 rodada",
-     "paga": "Vale para os inimigos também",
+     "paga": "Vale para os inimigos também (+1 rodada)",
      "status": "achado",
      "ref": "Rules#combat: m_CritDotExtraDuration",
      "voto": ""
@@ -794,7 +794,7 @@
      "emoji": "♟️",
      "nome": "Xadrez",
      "ganha": "Ordem dos turnos sem sorte: só a velocidade decide",
-     "paga": "Inimigos rápidos sempre jogam antes",
+     "paga": "Inimigos rápidos jogam antes (sem surpresa para nenhum lado)",
      "status": "achado",
      "ref": "Rules#combat: m_TurnOrderSpeedRollRange*",
      "voto": ""
@@ -804,7 +804,7 @@
      "emoji": "⚰️",
      "nome": "Porta da Morte Firme",
      "ganha": "Resistência à morte +10%",
-     "paga": "-10% de vida máxima",
+     "paga": "Só -5% de vida máxima",
      "status": "achado",
      "ref": "ActorDataStats: sub_stat.resistance.death",
      "voto": ""
@@ -814,7 +814,7 @@
      "emoji": "👹",
      "nome": "Saque de Chefe",
      "ganha": "Chefes soltam bugigangas raras com mais chance",
-     "paga": "Chefes com +25% de vida",
+     "paga": "Chefes com só +10% de vida",
      "status": "achado",
      "ref": "LootTable + ActorDataStats",
      "voto": ""
@@ -824,7 +824,7 @@
      "emoji": "🛤️",
      "nome": "Cura na Estrada",
      "ganha": "Cura 20% entre os pontos do mapa (era 10%)",
-     "paga": "Estresse máximo menor",
+     "paga": "Estresse máximo só 5% menor",
      "status": "achado",
      "ref": "ActorDataStats: add_stats.health_heal_percent_between_nodes",
      "voto": ""
@@ -834,10 +834,22 @@
      "emoji": "🎰",
      "nome": "Roleta de Peculiaridades",
      "ganha": "Ganha peculiaridades com mais frequência",
-     "paga": "Boas e ruins",
+     "paga": "Algumas ruins também (menos que as boas)",
      "status": "ideia",
      "ref": "Quirk",
      "voto": ""
+    },
+    {
+     "n": 26,
+     "emoji": "🕯️",
+     "nome": "Velas Infinitas",
+     "ganha": "Tudo no Altar da Esperança (e as escolhas de história) custa 1 vela só",
+     "paga": "Nada (pedido seu) — só some o desafio de juntar velas",
+     "status": "pronto",
+     "ref": "velas_infinitas",
+     "voto": "",
+     "receita": "# VELAS INFINITAS (pedido do dono): todo custo em VELAS DA ESPERANÇA vira 1 vela — Altar da Esperança (heróis,\n# habilidades, bugigangas, itens, diligência, memórias...) e as escolhas de história que pedem velas. Inclui DLCs.\n# (o jogo não tem nenhum custo 0; 1 é o menor que ele já usa, por segurança)\nExcel/*|Cost#*|m_ProfileValue                                     =1\nExcel/*|Cost#story_candles_cost_*|m_ItemQty                       =1\nExcel/*|Condition#story_cost_condition_candles_*|m_ConditionNumber =1",
+     "dlc": false
     }
    ],
    "pacote": null
