@@ -567,6 +567,7 @@
      "Mestre de Ofício",
      "Peculiaridade de Nascença"
     ],
+    "fixos_nomes": [],
     "pronto": true
    }
   },
@@ -847,12 +848,44 @@
      "paga": "Nada (pedido seu) — só some o desafio de juntar velas",
      "status": "pronto",
      "ref": "velas_infinitas",
-     "voto": "",
+     "voto": "sim",
      "receita": "# VELAS INFINITAS (pedido do dono): todo custo em VELAS DA ESPERANÇA vira 1 vela — Altar da Esperança (heróis,\n# habilidades, bugigangas, itens, diligência, memórias...) e as escolhas de história que pedem velas. Inclui DLCs.\n# (o jogo não tem nenhum custo 0; 1 é o menor que ele já usa, por segurança)\nExcel/*|Cost#*|m_ProfileValue                                     =1\nExcel/*|Cost#story_candles_cost_*|m_ItemQty                       =1\nExcel/*|Condition#story_cost_condition_candles_*|m_ConditionNumber =1",
+     "dlc": false
+    },
+    {
+     "n": 27,
+     "emoji": "💞",
+     "nome": "Laços no Máximo",
+     "ganha": "Toda expedição começa com a afinidade entre os heróis no MÁXIMO (relações que surgem: 90% boas, 0% ruins)",
+     "paga": "Nada (regra fixa sua)",
+     "status": "pronto",
+     "ref": "lacos_maximos",
+     "voto": "sim",
+     "receita": "# LAÇOS NO MÁXIMO (REGRA FIXA do dono): toda expedição começa com a afinidade entre os heróis no MÁXIMO (20; era 9).\n# Vale também para os heróis da reserva e para o modo Reinos (Kingdoms). As relações que surgirem tendem a ser boas.\nExcel/*|Rules#affinity|m_LeaningStart          =20\nExcel/*|Rules#affinity|m_LeaningStartReserve   =20",
      "dlc": false
     }
    ],
-   "pacote": null
+   "pacote": {
+    "nome": "ESCOLHIDOS",
+    "versao": 1,
+    "fixos": [
+     "velas_infinitas",
+     "lacos_maximos"
+    ],
+    "mods": [
+     "velas_infinitas",
+     "lacos_maximos"
+    ],
+    "nomes": [
+     "Velas Infinitas",
+     "Laços no Máximo"
+    ],
+    "fixos_nomes": [
+     "Velas Infinitas",
+     "Laços no Máximo"
+    ],
+    "pronto": true
+   }
   },
   {
    "id": "gk",
