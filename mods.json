@@ -1,0 +1,1438 @@
+{
+ "jogos": [
+  {
+   "id": "dd1",
+   "nome": "Darkest Dungeon",
+   "emoji": "🕯️",
+   "cor": "#b3261e",
+   "tid": "01008F1008DA6000",
+   "resumo": "Masmorras góticas, estresse e tocha. Inclui as 5 DLCs (Crimson Court, Color of Madness, Shieldbreaker, Musketeer, Fire's Edge).",
+   "dados": "Arquivos de texto do próprio jogo (.darkest e .json): 92.991 valores que o motor sabe mudar.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "💍",
+     "nome": "Colecionador de Relíquias",
+     "ganha": "Usar 2 bugigangas IGUAIS no mesmo herói (as ancestrais, do Corvo, de DLC...)",
+     "paga": "O lado ruim delas também soma: 2x o castigo",
+     "status": "pronto",
+     "ref": "colecionador",
+     "receita": "# COLECIONADOR DE RELÍQUIAS: o herói pode usar 2 bugigangas iguais (ancestrais, do Corvo, de troféu, de DLC...).\n# Os lados RUINS também somam: 2 iguais = 2x o bônus e 2x o castigo. (as comuns já não tinham limite: 0 = livre)\n*trinkets/*|entries#*|limit        x2",
+     "dlc": true
+    },
+    {
+     "n": 2,
+     "emoji": "🌑",
+     "nome": "Pacto da Escuridão",
+     "ganha": "No escuro, saque e crítico dos heróis em DOBRO",
+     "paga": "A tocha apaga 50% mais rápido",
+     "status": "pronto",
+     "ref": "pacto_escuridao",
+     "receita": "# PACTO DA ESCURIDÃO: a tocha apaga 50% mais rápido, mas no escuro o saque e o crítico dos heróis valem o DOBRO.\n# Jogo de risco: quanto mais escuro você aguenta, mais rico volta.\n*shared/rules|tile_light_loss#*|data                                    x1.5\n*shared/rules|darkness|range_table#*|value|loot_increase_gold           x2\n*shared/rules|darkness|range_table#*|value|loot_increase_treasure_draws x2\n*shared/rules|darkness|range_table#*|value|player_crit_increase         x2",
+     "dlc": true
+    },
+    {
+     "n": 3,
+     "emoji": "🛡️",
+     "nome": "Virtude Forjada",
+     "ganha": "Chance de VIRTUDE no teste de determinação: 45% (era 25%)",
+     "paga": "O estresse sobe 25% mais rápido",
+     "status": "pronto",
+     "ref": "virtude_forjada",
+     "receita": "# VIRTUDE FORJADA: o estresse sobe mais rápido, mas o teste de determinação vira VIRTUDE com 45% (era 25%).\n# O estresse deixa de ser só castigo e vira aposta. Vale no modo normal, Radiante, NG+ e Lua de Sangue (Crimson Court).\n*shared/rules|affliction_critical_success_chance               =0.45\n*shared/rules|monster_crit|*stress_damage                       x1.25\n*shared/rules|hallway_stress|*stress_damage_*                   x1.25   menos *chance*\n*shared/rules|passed_turn_stress_dmg                            x1.25",
+     "dlc": true
+    },
+    {
+     "n": 4,
+     "emoji": "🎒",
+     "nome": "Mochila de Mercenário",
+     "ganha": "Pilhas 50% maiores de ouro, relíquias e suprimentos",
+     "paga": "Suprimentos 25% mais caros",
+     "status": "pronto",
+     "ref": "mochila_mercenario",
+     "receita": "# MOCHILA DE MERCENÁRIO: pilhas maiores de ouro, relíquias e suprimentos; em troca, suprimentos 25% mais caros.\n*inventory/*currency.inventory.items|inventory_item#*|base_stack_limit   x1.5   menos *#urn|* menos *#blueprint|*\n*inventory/*supply.inventory.items|inventory_item#*|base_stack_limit     x1.5\n*inventory/*supply.inventory.items|inventory_item#*|purchase_gold_value  x1.25",
+     "dlc": true
+    },
+    {
+     "n": 5,
+     "emoji": "🎭",
+     "nome": "Peculiar Demais",
+     "ganha": "Até 7 peculiaridades boas (era 5) e mais travas",
+     "paga": "Até 7 ruins também",
+     "status": "achado",
+     "ref": "shared/rules: quirks_max_*"
+    },
+    {
+     "n": 6,
+     "emoji": "🗡️",
+     "nome": "Golpe de Misericórdia",
+     "ganha": "Crítico de herói alivia o DOBRO de estresse",
+     "paga": "Crítico de monstro estressa o dobro",
+     "status": "achado",
+     "ref": "shared/rules: player_crit, monster_crit"
+    },
+    {
+     "n": 7,
+     "emoji": "💀",
+     "nome": "Porta da Morte Teimosa",
+     "ganha": "Resistência à morte +15%",
+     "paga": "Cada ida à Porta da Morte estressa o grupo o dobro",
+     "status": "achado",
+     "ref": "heroes: death_blow + rules: deaths_door_*"
+    },
+    {
+     "n": 8,
+     "emoji": "📦",
+     "nome": "Curiosidade Mata",
+     "ganha": "Baús e altares disparam efeitos BONS com mais frequência",
+     "paga": "Os ruins também",
+     "status": "achado",
+     "ref": "shared/rules: curioTriggerChance_*"
+    },
+    {
+     "n": 9,
+     "emoji": "👑",
+     "nome": "Modo Lenda",
+     "ganha": "Ouro e tesouro em DOBRO",
+     "paga": "Monstros com +30% de vida e dano",
+     "status": "achado",
+     "ref": "monsters: hp/dmg + loot"
+    },
+    {
+     "n": 10,
+     "emoji": "🚪",
+     "nome": "Corredor Assombrado",
+     "ganha": "Golpe final alivia 3x mais estresse",
+     "paga": "Andar no corredor estressa mais",
+     "status": "achado",
+     "ref": "rules: hallway_stress, killing_blow_stress_relief"
+    },
+    {
+     "n": 11,
+     "emoji": "🔥",
+     "nome": "Fogueira de Veteranos",
+     "ganha": "Habilidades de acampamento custam 1 ponto a menos",
+     "paga": "Cada uma só pode ser usada 1 vez por acampamento",
+     "status": "achado",
+     "ref": "raid/camping: cost, use_limit"
+    },
+    {
+     "n": 12,
+     "emoji": "⚖️",
+     "nome": "Câmbio Justo",
+     "ganha": "Troca de relíquias com taxa melhor",
+     "paga": "Relíquias caem menos nas masmorras",
+     "status": "achado",
+     "ref": "heirloom_exchange + loot"
+    },
+    {
+     "n": 13,
+     "emoji": "⚒️",
+     "nome": "Armeiro Generoso",
+     "ganha": "+20% de dano e vida em cada nível do Ferreiro",
+     "paga": "Melhorias mais caras",
+     "status": "achado",
+     "ref": "heroes: weapon/armour + upgrades"
+    },
+    {
+     "n": 14,
+     "emoji": "🦠",
+     "nome": "Doença Rara, Doença Feia",
+     "ganha": "Pegar doença fica 50% mais raro",
+     "paga": "Os efeitos das doenças dobram",
+     "status": "achado",
+     "ref": "rules: disease_* + effects"
+    },
+    {
+     "n": 15,
+     "emoji": "🐎",
+     "nome": "Diligência de Veteranos",
+     "ganha": "Heróis chegam em nível 1-2",
+     "paga": "Custam ouro para recrutar",
+     "status": "ideia",
+     "ref": "campaign/roster (diligência)"
+    },
+    {
+     "n": 16,
+     "emoji": "🩸",
+     "nome": "Sangue Frio",
+     "ganha": "Sangramento e veneno dos heróis +50% de dano",
+     "paga": "Os dos monstros também",
+     "status": "achado",
+     "ref": "effects: dotBleed, dotPoison"
+    },
+    {
+     "n": 17,
+     "emoji": "💫",
+     "nome": "Atordoar Forte",
+     "ganha": "Atordoamento dos heróis +15% de chance",
+     "paga": "Monstros resistem +10% a atordoar",
+     "status": "achado",
+     "ref": "effects: stun + monsters: resistances"
+    },
+    {
+     "n": 18,
+     "emoji": "🏘️",
+     "nome": "Cidade Barata",
+     "ganha": "Construções do Povoado custam metade",
+     "paga": "A diligência traz menos heróis",
+     "status": "achado",
+     "ref": "upgrades: custos"
+    },
+    {
+     "n": 19,
+     "emoji": "💰",
+     "nome": "Saque Generoso",
+     "ganha": "Baús e curiosidades dão mais itens",
+     "paga": "Pilhas de ouro menores no saque",
+     "status": "achado",
+     "ref": "loot"
+    },
+    {
+     "n": 20,
+     "emoji": "⚡",
+     "nome": "Ritmo Acelerado",
+     "ganha": "Todos os heróis +2 de velocidade",
+     "paga": "Todos os monstros também: combates frenéticos",
+     "status": "achado",
+     "ref": "heroes/monsters: spd"
+    },
+    {
+     "n": 21,
+     "emoji": "🎯",
+     "nome": "Mira Treinada",
+     "ganha": "Precisão dos heróis +5",
+     "paga": "Monstros esquivam +5",
+     "status": "achado",
+     "ref": "combat_skill: atk + monsters: defense"
+    },
+    {
+     "n": 22,
+     "emoji": "😱",
+     "nome": "Estresse Contagioso",
+     "ganha": "Crítico de herói alivia o GRUPO TODO",
+     "paga": "Crítico de monstro estressa o grupo todo",
+     "status": "achado",
+     "ref": "rules: companion_stress_chance"
+    },
+    {
+     "n": 23,
+     "emoji": "🔄",
+     "nome": "Mudança Constante",
+     "ganha": "Peculiaridades ruins travam menos",
+     "paga": "As boas também ficam menos presas",
+     "status": "achado",
+     "ref": "rules: quirk_chance_to_lock_*"
+    },
+    {
+     "n": 24,
+     "emoji": "🏃",
+     "nome": "Sem Recuo",
+     "ganha": "Vencer o combate dá mais saque",
+     "paga": "Fugir do combate estressa o dobro",
+     "status": "achado",
+     "ref": "rules: combat_retreat_stress + loot"
+    },
+    {
+     "n": 25,
+     "emoji": "🌕",
+     "nome": "Lua de Sangue Domada",
+     "ganha": "(Crimson Court) A Sede aparece menos",
+     "paga": "Quando vem, é mais forte",
+     "status": "ideia",
+     "ref": "DLC Crimson Court: doença do Sangue"
+    }
+   ]
+  },
+  {
+   "id": "dd2",
+   "nome": "Darkest Dungeon II",
+   "emoji": "🛞",
+   "cor": "#c2571a",
+   "tid": "0100E5E01C098000",
+   "resumo": "A viagem de diligência até a Montanha, com relações entre heróis. DLCs: Binding Blade, Inhuman Bondage, Infernal Supporter, Hero Origin.",
+   "dados": "Uma planilha do jogo (merged.Group.csv) em pedaços: 75.478 valores que o motor sabe mudar.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "💎",
+     "nome": "Bugiganga Gêmea",
+     "ganha": "Ter 2 cópias da mesma bugiganga (212 bugigangas)",
+     "paga": "Os lados ruins também somam",
+     "status": "pronto",
+     "ref": "bugiganga_gemea",
+     "receita": "# BUGIGANGA GÊMEA: pode ter 2 cópias da mesma bugiganga (era 1). Os lados ruins também somam.\nExcel/*|Item#trinket*|m_possessionLimit      x2",
+     "dlc": false
+    },
+    {
+     "n": 2,
+     "emoji": "💥",
+     "nome": "Golpe Brutal",
+     "ganha": "Crítico dá 2x o dano (era 1,5x)",
+     "paga": "Vale para os inimigos também",
+     "status": "pronto",
+     "ref": "golpe_brutal",
+     "receita": "# GOLPE BRUTAL: crítico dá 2x o dano (era 1,5x) para TODOS — heróis e inimigos. Combates explosivos.\nExcel/*|Rules#combat|m_CritDamageMultiplications.2   =2.0",
+     "dlc": false
+    },
+    {
+     "n": 3,
+     "emoji": "🤝",
+     "nome": "Laços de Sangue",
+     "ganha": "Amizades se formam 2x mais rápido",
+     "paga": "Brigas também",
+     "status": "pronto",
+     "ref": "lacos_de_sangue",
+     "receita": "# LAÇOS DE SANGUE: as relações entre heróis mudam o dobro mais rápido, para o bem e para o mal.\nExcel/*|Rules#affinity|m_SkillModifierChanceBase        x2\nExcel/*|Rules#affinity|m_SkillModifierChancePerSkillUse x2",
+     "dlc": false
+    },
+    {
+     "n": 4,
+     "emoji": "🛒",
+     "nome": "Carroça de Carga",
+     "ganha": "Inventário de 28 espaços (era 20)",
+     "paga": "A corrida começa com metade do ouro",
+     "status": "pronto",
+     "ref": "carroca_de_carga",
+     "receita": "# CARROÇA DE CARGA: inventário com 28 espaços (era 20), mas cada corrida começa com metade do ouro.\nExcel/*|Rules#inventory|m_defaultSize   =28\nExcel/*|Rules#run|m_StartingGold        x0.5",
+     "dlc": false
+    },
+    {
+     "n": 5,
+     "emoji": "👝",
+     "nome": "Terceiro Bolso",
+     "ganha": "3 bugigangas por herói (era 2) — EXPERIMENTAL",
+     "paga": "Bugigangas 30% mais caras",
+     "status": "pronto",
+     "ref": "terceiro_bolso",
+     "receita": "# TERCEIRO BOLSO (EXPERIMENTAL: a tela pode não mostrar o 3º espaço): 3 bugigangas por herói, mas as bugigangas\n# custam 30% mais na Estalagem.\nExcel/*|Rules#hero|m_TrinketNumberOfSlots       =3\nExcel/*|Cost#trinket*_buy_cost|m_ItemQty        x1.3",
+     "dlc": false
+    },
+    {
+     "n": 6,
+     "emoji": "🗡️",
+     "nome": "Seis Golpes",
+     "ganha": "Herói equipa 6 habilidades de combate (era 5) — experimental",
+     "paga": "Inimigos com +10% de vida",
+     "status": "achado",
+     "ref": "ActorDataClass: m_EquippedCombatSkillLimit"
+    },
+    {
+     "n": 7,
+     "emoji": "🧠",
+     "nome": "Memória Longa",
+     "ganha": "6 espaços de Memória (era 5)",
+     "paga": "Memórias mais caras no Altar",
+     "status": "achado",
+     "ref": "Rules#hero: m_MemoryNumberOfSlots"
+    },
+    {
+     "n": 8,
+     "emoji": "🩺",
+     "nome": "Médico de Campo",
+     "ganha": "Curar e travar peculiaridades custa metade",
+     "paga": "Remover as ruins custa o dobro",
+     "status": "achado",
+     "ref": "Rules#hero: m_*QuirkByTagCosts"
+    },
+    {
+     "n": 9,
+     "emoji": "🎲",
+     "nome": "Velocidade Caótica",
+     "ganha": "Ordem dos turnos imprevisível (rolagem 0-10)",
+     "paga": "Para os inimigos também",
+     "status": "achado",
+     "ref": "Rules#combat: m_TurnOrderSpeedRoll*"
+    },
+    {
+     "n": 10,
+     "emoji": "❤️",
+     "nome": "Vida de Ferro",
+     "ganha": "+25% de vida máxima",
+     "paga": "-1 de velocidade",
+     "status": "achado",
+     "ref": "ActorDataStats: add_stats.health_max, speed"
+    },
+    {
+     "n": 11,
+     "emoji": "🧱",
+     "nome": "Mente Frágil, Corpo Forte",
+     "ganha": "Resistências +15%",
+     "paga": "Estresse máximo menor",
+     "status": "achado",
+     "ref": "ActorDataStats: sub_stat.resistance.*, stress_max"
+    },
+    {
+     "n": 12,
+     "emoji": "🌿",
+     "nome": "Respiro Pós-Batalha",
+     "ganha": "Fim de batalha cura até 40% (era 20%)",
+     "paga": "Inimigos 15% mais fortes",
+     "status": "achado",
+     "ref": "Rules#combat: m_BattleEndMinHealthHealUpToPercent"
+    },
+    {
+     "n": 13,
+     "emoji": "🐾",
+     "nome": "Carroça do Zoológico",
+     "ganha": "1 espaço de bicho de estimação e +1 de troféu",
+     "paga": "Reparos da diligência mais caros",
+     "status": "achado",
+     "ref": "Rules#stage_coach: m_PetNumberOfSlots, m_TrophyNumberOfSlots"
+    },
+    {
+     "n": 14,
+     "emoji": "🏴",
+     "nome": "Mercado Negro",
+     "ganha": "Itens da loja mais baratos",
+     "paga": "Loja com menos unidades",
+     "status": "achado",
+     "ref": "Cost: m_ItemQty + LootTable"
+    },
+    {
+     "n": 15,
+     "emoji": "🧪",
+     "nome": "Coleção Completa",
+     "ganha": "Pilhas maiores de itens de combate",
+     "paga": "4 espaços a menos no inventário",
+     "status": "achado",
+     "ref": "Item: m_maxQty + Rules#inventory"
+    },
+    {
+     "n": 16,
+     "emoji": "🪙",
+     "nome": "Ouro de Partida",
+     "ganha": "Começa a corrida com 80 de ouro (era 40)",
+     "paga": "Lojas 25% mais caras",
+     "status": "achado",
+     "ref": "Rules#run: m_StartingGold + Cost"
+    },
+    {
+     "n": 17,
+     "emoji": "🔦",
+     "nome": "Tocha Forte",
+     "ganha": "A tocha cai mais devagar",
+     "paga": "Menos bônus de saque com tocha alta",
+     "status": "achado",
+     "ref": "TorchLevel"
+    },
+    {
+     "n": 18,
+     "emoji": "🏨",
+     "nome": "Estalagem de Luxo",
+     "ganha": "Melhorias de Estalagem mais baratas",
+     "paga": "Itens da Estalagem duram menos",
+     "status": "achado",
+     "ref": "InnUpgrade + Cost"
+    },
+    {
+     "n": 19,
+     "emoji": "👫",
+     "nome": "Amigos de Infância",
+     "ganha": "Heróis começam com afinidade alta (14, era 9)",
+     "paga": "Relações mudam mais devagar depois",
+     "status": "achado",
+     "ref": "Rules#affinity: m_LeaningStart"
+    },
+    {
+     "n": 20,
+     "emoji": "🔥",
+     "nome": "Chama Persistente",
+     "ganha": "Crítico com sangramento/queimadura dura +1 rodada",
+     "paga": "Vale para os inimigos também",
+     "status": "achado",
+     "ref": "Rules#combat: m_CritDotExtraDuration"
+    },
+    {
+     "n": 21,
+     "emoji": "♟️",
+     "nome": "Xadrez",
+     "ganha": "Ordem dos turnos sem sorte: só a velocidade decide",
+     "paga": "Inimigos rápidos sempre jogam antes",
+     "status": "achado",
+     "ref": "Rules#combat: m_TurnOrderSpeedRollRange*"
+    },
+    {
+     "n": 22,
+     "emoji": "⚰️",
+     "nome": "Porta da Morte Firme",
+     "ganha": "Resistência à morte +10%",
+     "paga": "-10% de vida máxima",
+     "status": "achado",
+     "ref": "ActorDataStats: sub_stat.resistance.death"
+    },
+    {
+     "n": 23,
+     "emoji": "👹",
+     "nome": "Saque de Chefe",
+     "ganha": "Chefes soltam bugigangas raras com mais chance",
+     "paga": "Chefes com +25% de vida",
+     "status": "achado",
+     "ref": "LootTable + ActorDataStats"
+    },
+    {
+     "n": 24,
+     "emoji": "🛤️",
+     "nome": "Cura na Estrada",
+     "ganha": "Cura 20% entre os pontos do mapa (era 10%)",
+     "paga": "Estresse máximo menor",
+     "status": "achado",
+     "ref": "ActorDataStats: add_stats.health_heal_percent_between_nodes"
+    },
+    {
+     "n": 25,
+     "emoji": "🎰",
+     "nome": "Roleta de Peculiaridades",
+     "ganha": "Ganha peculiaridades com mais frequência",
+     "paga": "Boas e ruins",
+     "status": "ideia",
+     "ref": "Quirk"
+    }
+   ]
+  },
+  {
+   "id": "gk",
+   "nome": "Graveyard Keeper 1 e 2",
+   "emoji": "⚰️",
+   "cor": "#3f7d3a",
+   "tid": "(ver ao abrir)",
+   "resumo": "O jogo do coveiro: cemitério, igreja, alquimia e muito comércio. Primeiro o 1, depois o 2 (as ideias do 2 serão adaptadas quando ele for aberto).",
+   "dados": "Unity: objetos, receitas e preços ficam em arquivos do Unity. Falta abrir para confirmar onde.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "💪",
+     "nome": "Coveiro Workaholic",
+     "ganha": "Ações gastam 30% menos energia",
+     "paga": "Levam 20% mais tempo",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 2,
+     "emoji": "🦴",
+     "nome": "Necrotério Gourmet",
+     "ganha": "Cadáveres com mais caveiras brancas (melhores)",
+     "paga": "Apodrecem mais rápido",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 3,
+     "emoji": "⛪",
+     "nome": "Sermão de Estrela",
+     "ganha": "A missa rende mais fé e moedas",
+     "paga": "Só com cemitério bonito",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 4,
+     "emoji": "⛏️",
+     "nome": "Ferramentas de Mestre",
+     "ganha": "Ferramentas duram o dobro",
+     "paga": "Custam mais material",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 5,
+     "emoji": "🔴",
+     "nome": "Pontos Generosos",
+     "ganha": "Mais pontos vermelhos/verdes/azuis por ação",
+     "paga": "Pesquisas mais caras no fim da árvore",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 6,
+     "emoji": "🫏",
+     "nome": "Burro Sindicalizado",
+     "ganha": "O burro entrega mais corpos por dia",
+     "paga": "Pede cenoura como pagamento",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 7,
+     "emoji": "📈",
+     "nome": "Feira Inflacionada",
+     "ganha": "Vende tudo 50% mais caro",
+     "paga": "Compra também 50% mais caro",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 8,
+     "emoji": "⚗️",
+     "nome": "Alquimista Louco",
+     "ganha": "Receitas de alquimia rendem 2 unidades",
+     "paga": "Usam um ingrediente a mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 9,
+     "emoji": "🌙",
+     "nome": "Noite Produtiva",
+     "ganha": "O dia dura mais",
+     "paga": "Dormir recupera menos energia",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 10,
+     "emoji": "🪦",
+     "nome": "Cemitério de Luxo",
+     "ganha": "Túmulos e enfeites valem mais qualidade",
+     "paga": "Custam mais pedra e madeira",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 11,
+     "emoji": "🎣",
+     "nome": "Pescador Sortudo",
+     "ganha": "Peixe raro cai mais",
+     "paga": "A vara quebra mais rápido",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 12,
+     "emoji": "🍲",
+     "nome": "Cozinha de Taverna",
+     "ganha": "Comida recupera mais energia",
+     "paga": "Ingredientes estragam mais rápido",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 13,
+     "emoji": "🕸️",
+     "nome": "Masmorra Brava",
+     "ganha": "Inimigos soltam mais itens",
+     "paga": "Têm mais vida",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 14,
+     "emoji": "🏭",
+     "nome": "Mesa Turbinada",
+     "ganha": "Mesas de trabalho produzem mais rápido",
+     "paga": "Gastam mais carvão e lenha",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 15,
+     "emoji": "💬",
+     "nome": "Relacionamento Rápido",
+     "ganha": "Missões dos personagens dão mais amizade",
+     "paga": "Pedem mais itens",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 16,
+     "emoji": "🧟",
+     "nome": "Zumbis Eficientes",
+     "ganha": "Trabalhadores zumbis mais rápidos",
+     "paga": "Se desfazem mais cedo",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 17,
+     "emoji": "🔮",
+     "nome": "Astrologia Útil",
+     "ganha": "Bônus dos dias da semana maiores",
+     "paga": "Os dias ruins pesam mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 18,
+     "emoji": "🍷",
+     "nome": "Vinho da Casa",
+     "ganha": "Cervejaria e vinho rendem mais",
+     "paga": "Ingredientes mais caros",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 19,
+     "emoji": "🪨",
+     "nome": "Pedreira Rica",
+     "ganha": "Mais pedra e mármore por golpe",
+     "paga": "Picareta gasta mais rápido",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 20,
+     "emoji": "🌾",
+     "nome": "Jardim Fértil",
+     "ganha": "Colheita maior",
+     "paga": "Sementes mais caras",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 21,
+     "emoji": "🔥",
+     "nome": "Inquisição Rigorosa",
+     "ganha": "Fogueira da Inquisição dá mais fé",
+     "paga": "Exige mais preparação",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 22,
+     "emoji": "📜",
+     "nome": "Livros Raros",
+     "ganha": "Escrever e pesquisar dá mais pontos azuis",
+     "paga": "Papel e tinta mais caros",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 23,
+     "emoji": "🔪",
+     "nome": "Autópsia de Mestre",
+     "ganha": "Remover partes dá itens melhores",
+     "paga": "Sai mais lixo também",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 24,
+     "emoji": "🧳",
+     "nome": "Mercador Viajante",
+     "ganha": "Mais itens à venda",
+     "paga": "Preços oscilam mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 25,
+     "emoji": "🦇",
+     "nome": "Vigília Noturna",
+     "ganha": "Mais eventos e recompensas à noite",
+     "paga": "Mais perigo à noite",
+     "status": "ideia",
+     "ref": ""
+    }
+   ]
+  },
+  {
+   "id": "hades",
+   "nome": "Hades",
+   "emoji": "🔱",
+   "cor": "#d4541b",
+   "tid": "(ver ao abrir)",
+   "resumo": "Zagreus tentando fugir do Submundo, com bênçãos dos deuses do Olimpo.",
+   "dados": "Scripts Lua em Content\\Scripts (TraitData, LootData, HeroData, StoreData...). Falta abrir.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "✨",
+     "nome": "Olimpo Generoso",
+     "ganha": "Mais bênçãos Épicas, Heroicas e Duplas",
+     "paga": "Caronte cobra mais caro",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 2,
+     "emoji": "4️⃣",
+     "nome": "Escolha Quádrupla",
+     "ganha": "4 opções de bênção (era 3)",
+     "paga": "Menos Romãs de Poder",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 3,
+     "emoji": "🌀",
+     "nome": "Caos Frequente",
+     "ganha": "Portais do Caos mais frequentes e baratos",
+     "paga": "As maldições duram mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 4,
+     "emoji": "💀",
+     "nome": "Desafio em Dobro",
+     "ganha": "+1 Desafio da Morte",
+     "paga": "Inimigos do Elísio e de Estige mais fortes",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 5,
+     "emoji": "🎁",
+     "nome": "Lembrança Livre",
+     "ganha": "Trocar de lembrança em todas as salas",
+     "paga": "Lembranças sobem de nível mais devagar",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 6,
+     "emoji": "⚔️",
+     "nome": "Arsenal Desperto",
+     "ganha": "Aspectos das armas fortes já no nível 1",
+     "paga": "Sangue de Titã rende menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 7,
+     "emoji": "🍎",
+     "nome": "Romã Gorda",
+     "ganha": "Romã de Poder sobe 2 níveis",
+     "paga": "Aparece menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 8,
+     "emoji": "🥃",
+     "nome": "Vida de Vidro",
+     "ganha": "Dano em DOBRO",
+     "paga": "Metade da vida",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 9,
+     "emoji": "🪙",
+     "nome": "Fonte de Ouro",
+     "ganha": "Salas dão mais óbolos",
+     "paga": "Loja com menos itens",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 10,
+     "emoji": "💨",
+     "nome": "Mestre do Dash",
+     "ganha": "+1 dash e mais rápido",
+     "paga": "Ataque especial mais fraco",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 11,
+     "emoji": "🌡️",
+     "nome": "Calor Alternativo",
+     "ganha": "Pacto da Punição dá mais Escuridão, Gemas e Chaves",
+     "paga": "As punições continuam valendo",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 12,
+     "emoji": "⚡",
+     "nome": "Deus Ciumento",
+     "ganha": "Bênçãos do mesmo deus mais fortes",
+     "paga": "Outros deuses aparecem menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 13,
+     "emoji": "👺",
+     "nome": "Elenco Reforçado",
+     "ganha": "Elites soltam recompensa extra",
+     "paga": "Mais Elites e mini-chefes",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 14,
+     "emoji": "🪞",
+     "nome": "Espelho Barato",
+     "ganha": "Talentos do Espelho custam metade",
+     "paga": "Têm menos níveis",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 15,
+     "emoji": "🔨",
+     "nome": "Martelo Duplo",
+     "ganha": "Escolhe 2 Martelos de Dédalo por vez",
+     "paga": "O martelo aparece menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 16,
+     "emoji": "🛡️",
+     "nome": "Inimigos Blindados",
+     "ganha": "Quebrar armadura solta ouro",
+     "paga": "Todos os inimigos têm armadura",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 17,
+     "emoji": "💎",
+     "nome": "Gemas de Sangue",
+     "ganha": "Começa com 2 Gemas de Sangue (Cast)",
+     "paga": "Voltam mais devagar",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 18,
+     "emoji": "📣",
+     "nome": "Chamado Rápido",
+     "ganha": "A barra de Chamado enche 2x mais rápido",
+     "paga": "Chamados mais fracos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 19,
+     "emoji": "👟",
+     "nome": "Hermes Constante",
+     "ganha": "Hermes aparece mais",
+     "paga": "Outros deuses um pouco menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 20,
+     "emoji": "🕳️",
+     "nome": "Poço Misterioso",
+     "ganha": "Itens do Poço de Caronte mais fortes",
+     "paga": "Duram menos salas",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 21,
+     "emoji": "🐍",
+     "nome": "Fúrias Furiosas",
+     "ganha": "Chefe do Tártaro solta uma Chave extra",
+     "paga": "Tem mais vida",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 22,
+     "emoji": "🧔",
+     "nome": "Amigos no Caminho",
+     "ganha": "Sísifo, Eurídice e Pátroclo aparecem mais",
+     "paga": "Menos salas de recompensa",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 23,
+     "emoji": "💵",
+     "nome": "Óbolo Inflado",
+     "ganha": "Começa com 100 óbolos",
+     "paga": "Cada sala dá menos",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 24,
+     "emoji": "🏺",
+     "nome": "Tesouro Infernal",
+     "ganha": "Mais salas de desafio com recompensa maior",
+     "paga": "Mais difíceis",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 25,
+     "emoji": "🎲",
+     "nome": "Destino Sorteado",
+     "ganha": "Recompensas de sala sorteadas e maiores",
+     "paga": "Você não escolhe a porta",
+     "status": "ideia",
+     "ref": ""
+    }
+   ]
+  },
+  {
+   "id": "p5r",
+   "nome": "Persona 5 Royal",
+   "emoji": "🎭",
+   "cor": "#d0021b",
+   "tid": "(ver ao abrir)",
+   "resumo": "Os Ladrões Fantasmas: dia a dia em Tóquio, Palácios e Mementos com Personas.",
+   "dados": "Tabelas .TBL dentro do TABLE.PAC (habilidades, Personas, inimigos, itens, armas). Falta estudar.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "💴",
+     "nome": "Ladrão Rico",
+     "ganha": "Inimigos dão mais dinheiro",
+     "paga": "Lojas cobram mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 2,
+     "emoji": "🧬",
+     "nome": "Fusão Experiente",
+     "ganha": "Personas fundidas com +2 níveis",
+     "paga": "A fusão custa mais no Compêndio",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 3,
+     "emoji": "🔫",
+     "nome": "Arsenal do Iwai",
+     "ganha": "Armas de fogo com mais balas e dano",
+     "paga": "As melhores ficam mais caras",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 4,
+     "emoji": "🚇",
+     "nome": "Mementos Perigoso",
+     "ganha": "Mementos dá mais experiência e itens",
+     "paga": "Inimigos mais fortes",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 5,
+     "emoji": "💍",
+     "nome": "Acessórios Lendários",
+     "ganha": "Acessórios com atributos maiores",
+     "paga": "Lojas vendem menos unidades",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 6,
+     "emoji": "🎯",
+     "nome": "Tudo ou Nada",
+     "ganha": "Dano de fraqueza e crítico maior",
+     "paga": "Para os dois lados",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 7,
+     "emoji": "🔮",
+     "nome": "Magia Concentrada",
+     "ganha": "Habilidades mágicas 30% mais fortes",
+     "paga": "Gastam mais SP",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 8,
+     "emoji": "👊",
+     "nome": "Físico Brutal",
+     "ganha": "Golpes físicos mais fortes",
+     "paga": "Gastam mais vida",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 9,
+     "emoji": "🗣️",
+     "nome": "Negociador",
+     "ganha": "Conversa com Shadows dá mais itens e dinheiro",
+     "paga": "Elas fogem mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 10,
+     "emoji": "🥷",
+     "nome": "Ladrão Furtivo",
+     "ganha": "Emboscada dá mais vantagem",
+     "paga": "Ser pego é pior",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 11,
+     "emoji": "🃏",
+     "nome": "Mercado de Cartas",
+     "ganha": "Cartas de habilidade mais baratas",
+     "paga": "Mais raras de cair",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 12,
+     "emoji": "👹",
+     "nome": "Chefes de Verdade",
+     "ganha": "Chefes dão mais experiência",
+     "paga": "Mais vida e uma habilidade a mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 13,
+     "emoji": "🎲",
+     "nome": "Persona Selvagem",
+     "ganha": "Atributos variam +-20% a cada fusão",
+     "paga": "Pode sair pior",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 14,
+     "emoji": "📚",
+     "nome": "Estudante Aplicado",
+     "ganha": "Estatísticas sociais sobem mais rápido",
+     "paga": "O calendário continua igual (talvez no código)",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 15,
+     "emoji": "🦺",
+     "nome": "Armadura Pesada",
+     "ganha": "Armaduras mais fortes",
+     "paga": "Tiram agilidade",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 16,
+     "emoji": "🔁",
+     "nome": "Revezamento Forte",
+     "ganha": "Passar o turno (Baton Pass) dá mais bônus",
+     "paga": "Inimigos com menos fraquezas",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 17,
+     "emoji": "🌟",
+     "nome": "Show Time Frequente",
+     "ganha": "Ataques especiais em dupla aparecem mais",
+     "paga": "Causam um pouco menos de dano",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 18,
+     "emoji": "💊",
+     "nome": "Clínica da Takemi",
+     "ganha": "Itens de cura curam mais",
+     "paga": "Custam mais",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 19,
+     "emoji": "🙈",
+     "nome": "Fraqueza Escondida",
+     "ganha": "Inimigos dão mais experiência",
+     "paga": "Têm menos fraquezas",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 20,
+     "emoji": "🧰",
+     "nome": "Mementos Rico",
+     "ganha": "Mais baús em Mementos",
+     "paga": "Baús com armadilha",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 21,
+     "emoji": "🏋️",
+     "nome": "Persona Gorda",
+     "ganha": "Atributos das Personas +10%",
+     "paga": "Fusões mais caras",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 22,
+     "emoji": "🪑",
+     "nome": "Banco de Reserva",
+     "ganha": "Reserva ganha 100% da experiência",
+     "paga": "Menos dinheiro por luta",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 23,
+     "emoji": "🏎️",
+     "nome": "Shadows Velozes",
+     "ganha": "Shadows soltam mais itens",
+     "paga": "Têm mais agilidade",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 24,
+     "emoji": "⚔️",
+     "nome": "Armas Raras",
+     "ganha": "Armas melhores caem de Shadows",
+     "paga": "Mais raras na loja",
+     "status": "ideia",
+     "ref": ""
+    },
+    {
+     "n": 25,
+     "emoji": "💧",
+     "nome": "SP de Cura",
+     "ganha": "Habilidades de cura gastam menos SP",
+     "paga": "As de ataque gastam mais",
+     "status": "ideia",
+     "ref": ""
+    }
+   ]
+  },
+  {
+   "id": "bg",
+   "nome": "Baldur's Gate I e II EE",
+   "emoji": "🐉",
+   "cor": "#b08a1e",
+   "tid": "010010A00DA48000",
+   "resumo": "RPG clássico de Dungeons & Dragons (Infinity Engine), os dois jogos no mesmo pacote.",
+   "dados": "Tabelas 2DA, itens ITM, magias SPL, criaturas CRE e lojas STO. O motor já lê o texto; falta a parte de jogabilidade.",
+   "mods": [
+    {
+     "n": 1,
+     "emoji": "🏅",
+     "nome": "Grão-Mestre Livre",
+     "ganha": "Toda classe chega a Grão-Mestre em armas",
+     "paga": "Inimigos guerreiros também mais treinados",
+     "status": "ideia",
+     "ref": "WSPECIAL.2DA"
+    },
+    {
+     "n": 2,
+     "emoji": "🎒",
+     "nome": "Mochila Sem Fundo",
+     "ganha": "Pilhas maiores de poções, flechas e gemas",
+     "paga": "Peso conta mais",
+     "status": "ideia",
+     "ref": "ITM: tamanho da pilha"
+    },
+    {
+     "n": 3,
+     "emoji": "📖",
+     "nome": "Mago Erudito",
+     "ganha": "+1 espaço de magia por círculo",
+     "paga": "Magos inimigos também ganham",
+     "status": "ideia",
+     "ref": "MXSPLWIZ.2DA"
+    },
+    {
+     "n": 4,
+     "emoji": "🧝",
+     "nome": "Kits Livres",
+     "ganha": "Kits e multiclasse para mais raças",
+     "paga": "Atributos mínimos mais altos",
+     "status": "ideia",
+     "ref": "CLSRCREQ.2DA"
+    },
+    {
+     "n": 5,
+     "emoji": "🗡️",
+     "nome": "Itens Lendários Despertos",
+     "ganha": "Armas +1/+2 viram +2/+3",
+     "paga": "Lojas cobram mais",
+     "status": "ideia",
+     "ref": "ITM"
+    },
+    {
+     "n": 6,
+     "emoji": "⛪",
+     "nome": "Morte Mais Leve",
+     "ganha": "Ressurreição mais barata",
+     "paga": "Quem morre perde um pouco de experiência",
+     "status": "ideia",
+     "ref": "STO (templos)"
+    },
+    {
+     "n": 7,
+     "emoji": "📈",
+     "nome": "Teto de Lenda",
+     "ganha": "Limite de experiência maior no BG1",
+     "paga": "Inimigos do fim mais fortes",
+     "status": "ideia",
+     "ref": "XPCAP.2DA"
+    },
+    {
+     "n": 8,
+     "emoji": "❤️",
+     "nome": "Vida de Guerreiro",
+     "ganha": "Dados de vida maiores por nível",
+     "paga": "Inimigos com +20% de vida",
+     "status": "ideia",
+     "ref": "HPCLASS"
+    },
+    {
+     "n": 9,
+     "emoji": "🗝️",
+     "nome": "Ladrão de Elite",
+     "ganha": "Mais pontos de ladrão por nível",
+     "paga": "Armadilhas mais mortais",
+     "status": "ideia",
+     "ref": "2DA de ladrão"
+    },
+    {
+     "n": 10,
+     "emoji": "🌪️",
+     "nome": "Feitiço Selvagem",
+     "ganha": "Magias com mais dano",
+     "paga": "Inimigos resistem mais à magia",
+     "status": "ideia",
+     "ref": "SPL"
+    },
+    {
+     "n": 11,
+     "emoji": "💱",
+     "nome": "Comércio Livre",
+     "ganha": "Lojas pagam mais pelo que você vende",
+     "paga": "Vendem mais caro",
+     "status": "ideia",
+     "ref": "STO"
+    },
+    {
+     "n": 12,
+     "emoji": "🏕️",
+     "nome": "Descanso Perigoso",
+     "ganha": "Descansar na estrada cura mais",
+     "paga": "Emboscada mais provável",
+     "status": "ideia",
+     "ref": "2DA de descanso"
+    },
+    {
+     "n": 13,
+     "emoji": "🧑‍🤝‍🧑",
+     "nome": "Companheiro Forte",
+     "ganha": "Companheiros com atributos melhores",
+     "paga": "Chefes também",
+     "status": "ideia",
+     "ref": "CRE"
+    },
+    {
+     "n": 14,
+     "emoji": "🏹",
+     "nome": "Arqueiro Mestre",
+     "ganha": "Arcos e bestas com +1 ataque por rodada",
+     "paga": "Flechas mais caras",
+     "status": "ideia",
+     "ref": "ITM"
+    },
+    {
+     "n": 15,
+     "emoji": "🐲",
+     "nome": "Dragões Furiosos",
+     "ganha": "Tesouro a mais no covil",
+     "paga": "Dragões com mais vida e magias",
+     "status": "ideia",
+     "ref": "CRE"
+    },
+    {
+     "n": 16,
+     "emoji": "🎲",
+     "nome": "Atributos Heroicos",
+     "ganha": "Ficha com rolagens melhores",
+     "paga": "Inimigos com atributos melhores",
+     "status": "ideia",
+     "ref": "2DA de criação"
+    },
+    {
+     "n": 17,
+     "emoji": "🍀",
+     "nome": "Sorte de Tymora",
+     "ganha": "Crítico em 19-20 para o grupo",
+     "paga": "Inimigos também",
+     "status": "ideia",
+     "ref": "ITM/SPL"
+    },
+    {
+     "n": 18,
+     "emoji": "🎆",
+     "nome": "Magia Selvagem Viva",
+     "ganha": "(BG2) Surtos selvagens mais frequentes e mais fortes",
+     "paga": "Mais imprevisível",
+     "status": "ideia",
+     "ref": "WILDMAG"
+    },
+    {
+     "n": 19,
+     "emoji": "🙏",
+     "nome": "Paladino Abençoado",
+     "ganha": "Imposição de mãos cura mais",
+     "paga": "Usos por dia menores",
+     "status": "ideia",
+     "ref": "SPL"
+    },
+    {
+     "n": 20,
+     "emoji": "🐻",
+     "nome": "Druida da Natureza",
+     "ganha": "Formas animais mais fortes",
+     "paga": "Duram menos",
+     "status": "ideia",
+     "ref": "SPL/CRE"
+    },
+    {
+     "n": 21,
+     "emoji": "💰",
+     "nome": "Ouro Pesado",
+     "ganha": "Encontros soltam mais ouro",
+     "paga": "Lojas 30% mais caras",
+     "status": "ideia",
+     "ref": "CRE/STO"
+    },
+    {
+     "n": 22,
+     "emoji": "📜",
+     "nome": "Pergaminho Seguro",
+     "ganha": "Copiar magias nunca falha",
+     "paga": "Custa mais ouro",
+     "status": "ideia",
+     "ref": "2DA de inteligência"
+    },
+    {
+     "n": 23,
+     "emoji": "🎻",
+     "nome": "Bardo Inspirador",
+     "ganha": "Canção do bardo com bônus maior",
+     "paga": "Bardo luta pior",
+     "status": "ideia",
+     "ref": "SPL"
+    },
+    {
+     "n": 24,
+     "emoji": "👥",
+     "nome": "Monstros em Bando",
+     "ganha": "Mais experiência por encontro",
+     "paga": "Mais inimigos por encontro",
+     "status": "ideia",
+     "ref": "ARE/CRE"
+    },
+    {
+     "n": 25,
+     "emoji": "😴",
+     "nome": "Fadiga Leve",
+     "ganha": "O cansaço demora mais a chegar",
+     "paga": "Estalagens mais caras",
+     "status": "ideia",
+     "ref": "STO + 2DA"
+    }
+   ]
+  }
+ ]
+}
