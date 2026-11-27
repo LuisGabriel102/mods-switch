@@ -756,12 +756,12 @@
      "n": 16,
      "emoji": "🪙",
      "nome": "Ouro de Partida",
-     "ganha": "A corrida começa com o DOBRO de ouro (80, era 40)",
+     "ganha": "A corrida começa com 80 de ouro (era 40; já com a Carroça de Carga)",
      "paga": "Compras 10% mais caras",
      "status": "pronto",
      "ref": "ouro_de_partida",
      "voto": "sim",
-     "receita": "# OURO DE PARTIDA: a corrida começa com o DOBRO de ouro (80, era 40); você paga (leve): compras 10% mais caras.\nExcel/*|Rules#run|m_StartingGold     =80\nExcel/*|Cost#*_buy_cost|m_ItemQty    x1.1",
+     "receita": "# OURO DE PARTIDA: a corrida começa com bem mais ouro: 100 (era 40; com a Carroça de Carga x0.8 fica 80, +25% do que era: pedido 27/11).\n# Você paga (leve): compras 10% mais caras.\nExcel/*|Rules#run|m_StartingGold     =100\nExcel/*|Cost#*_buy_cost|m_ItemQty    x1.1",
      "dlc": false
     },
     {
@@ -856,6 +856,18 @@
     },
     {
      "n": 26,
+     "emoji": "🎁",
+     "nome": "Bugigangas de Partida",
+     "ganha": "Mais bugigangas no começo da corrida: na pousada do vale (comuns 2 → 3, raras 2-3 → 3-4) e no prêmio da estrada (chance 25% → 31%, e +25% de ouro)",
+     "paga": "Nada (pedido seu)",
+     "status": "pronto",
+     "ref": "bugigangas_de_partida",
+     "voto": "sim",
+     "receita": "# BUGIGANGAS DE PARTIDA: as mudanças estão em bugigangas_de_partida.blocos (acréscimos nas listas de prêmios do começo).",
+     "dlc": false
+    },
+    {
+     "n": 27,
      "emoji": "🕯️",
      "nome": "Velas Infinitas",
      "ganha": "Tudo no Altar da Esperança (e as escolhas de história) custa 1 vela só",
@@ -867,7 +879,7 @@
      "dlc": false
     },
     {
-     "n": 27,
+     "n": 28,
      "emoji": "🔥",
      "nome": "Chama que Cresce",
      "ganha": "As Chamas Infernais da Carruagem (as \"fogueiras negras\") deixam o grupo mais forte a cada região: até +75% de dano, +2 de velocidade, +10% de crítico, -15% de dano recebido e +20% de vida. No Brilho do Assassino, cada abate dá +3% de dano e +2% de crítico até a pousada (empilha)",
@@ -879,7 +891,7 @@
      "dlc": false
     },
     {
-     "n": 28,
+     "n": 29,
      "emoji": "💞",
      "nome": "Laços no Máximo",
      "ganha": "Toda expedição começa com a afinidade entre os heróis no MÁXIMO (relações que surgem: 90% boas, 0% ruins)",
@@ -911,7 +923,8 @@
      "mente_fragil_corpo_forte",
      "respiro_pos_batalha",
      "mercado_negro",
-     "chama_que_cresce"
+     "chama_que_cresce",
+     "bugigangas_de_partida"
     ],
     "nomes": [
      "Bugiganga Gêmea",
@@ -924,6 +937,7 @@
      "Respiro Pós-Batalha",
      "Mercado Negro",
      "Ouro de Partida",
+     "Bugigangas de Partida",
      "Velas Infinitas",
      "Chama que Cresce",
      "Laços no Máximo"
