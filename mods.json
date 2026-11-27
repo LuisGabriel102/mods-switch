@@ -2501,19 +2501,21 @@
      "nome": "Grão-Mestre Livre",
      "ganha": "Qualquer classe chega ao treino máximo com uma arma (Grão-Mestre); hoje só guerreiros chegam",
      "paga": "Inimigos guerreiros também mais treinados",
-     "status": "ideia",
-     "ref": "WSPECIAL.2DA",
-     "voto": "amei"
+     "status": "pronto",
+     "ref": "bg_mods.py grao_mestre_livre",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função grao_mestre_livre; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 2,
      "emoji": "🎒",
      "nome": "Mochila Sem Fundo",
-     "ganha": "Mais poções, flechas e gemas num espaço só da mochila",
-     "paga": "Peso conta mais",
-     "status": "ideia",
-     "ref": "ITM: tamanho da pilha",
-     "voto": "amei"
+     "ganha": "Pilhas 3x maiores: flechas 80 → 240, poções 24 → 72, gemas...",
+     "paga": "Você carrega mais coisas, então pesa mais",
+     "status": "pronto",
+     "ref": "bg_mods.py mochila_sem_fundo",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função mochila_sem_fundo; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 3,
@@ -2521,29 +2523,32 @@
      "nome": "Mago Erudito",
      "ganha": "Magos preparam 2 magias a mais por dia em cada nível de magia (versão 🚀)",
      "paga": "Magos inimigos também ganham",
-     "status": "ideia",
-     "ref": "MXSPLWIZ.2DA",
-     "voto": "maior"
+     "status": "pronto",
+     "ref": "bg_mods.py mago_erudito",
+     "voto": "maior",
+     "receita": "python -I bg_mods.py   (função mago_erudito; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 4,
      "emoji": "🧝",
      "nome": "Kits Livres",
-     "ganha": "Mais raças podem escolher especializações (kits) e misturar duas classes",
+     "ganha": "Toda raça pode toda classe (inclusive as mistas) e todo kit da classe",
      "paga": "Só continua valendo o atributo mínimo de cada kit (versão 💸)",
-     "status": "ideia",
-     "ref": "CLSRCREQ.2DA",
-     "voto": "menos+sim"
+     "status": "pronto",
+     "ref": "bg_mods.py kits_livres",
+     "voto": "menos+sim",
+     "receita": "python -I bg_mods.py   (função kits_livres; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 5,
      "emoji": "🗡️",
      "nome": "Itens Lendários Despertos",
-     "ganha": "Armas mágicas ficam mais fortes: as +1 viram +2, as +2 viram +3",
-     "paga": "Lojas cobram mais",
-     "status": "ideia",
-     "ref": "ITM",
-     "voto": "amei"
+     "ganha": "Armas mágicas ficam mais fortes: as +1 viram +2, as +2 viram +3 (143 no BG1, 140 no BG2)",
+     "paga": "Custam 25% mais nas lojas",
+     "status": "pronto",
+     "ref": "bg_mods.py itens_lendarios",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função itens_lendarios; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 6,
@@ -2559,11 +2564,12 @@
      "n": 7,
      "emoji": "📈",
      "nome": "Teto de Lenda",
-     "ganha": "No BG1 os heróis sobem mais níveis (o limite de experiência aumenta)",
-     "paga": "Inimigos do fim mais fortes",
-     "status": "ideia",
-     "ref": "XPCAP.2DA",
-     "voto": "amei"
+     "ganha": "No BG1 o limite de experiência sobe de 500.000 para 2.000.000 (os heróis sobem bem mais níveis)",
+     "paga": "Nada por enquanto (os inimigos do fim ficam iguais)",
+     "status": "pronto",
+     "ref": "bg_mods.py teto_de_lenda",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função teto_de_lenda; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 8,
@@ -2599,11 +2605,12 @@
      "n": 11,
      "emoji": "💱",
      "nome": "Comércio Livre",
-     "ganha": "As lojas pagam mais pelo que você vende",
-     "paga": "As lojas vendem só 10% mais caro (versão 💸)",
-     "status": "ideia",
-     "ref": "STO",
-     "voto": "amei+menos"
+     "ganha": "As lojas pagam o DOBRO pelo que você vende",
+     "paga": "Vendem só 10% mais caro (versão 💸)",
+     "status": "pronto",
+     "ref": "bg_mods.py comercio_livre",
+     "voto": "amei+menos",
+     "receita": "python -I bg_mods.py   (função comercio_livre; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 12,
@@ -2669,21 +2676,23 @@
      "n": 18,
      "emoji": "🎆",
      "nome": "Magia Selvagem Viva",
-     "ganha": "(BG2) A magia do mago selvagem (que sai imprevisível) dispara mais e mais forte",
+     "ganha": "A magia do mago selvagem (imprevisível) sai mais forte: o sorteio puxa +1 nível. Quantas vezes ela \"surta\" fica no código e não muda",
      "paga": "Mais imprevisível",
-     "status": "ideia",
-     "ref": "WILDMAG",
-     "voto": "amei"
+     "status": "pronto",
+     "ref": "bg_mods.py magia_selvagem_viva",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função magia_selvagem_viva; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 19,
      "emoji": "🙏",
      "nome": "Paladino Abençoado",
-     "ganha": "A cura por toque do paladino (guerreiro sagrado) cura mais",
+     "ganha": "A cura por toque do paladino cura o DOBRO",
      "paga": "Nada (versão 💸)",
-     "status": "ideia",
-     "ref": "SPL",
-     "voto": "amei+menos"
+     "status": "pronto",
+     "ref": "bg_mods.py paladino_abencoado",
+     "voto": "amei+menos",
+     "receita": "python -I bg_mods.py   (função paladino_abencoado; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 20,
@@ -2709,11 +2718,12 @@
      "n": 22,
      "emoji": "📜",
      "nome": "Pergaminho Seguro",
-     "ganha": "O mago nunca falha ao copiar uma magia do pergaminho para o livro",
-     "paga": "Copiar custa só 10% mais ouro (versão 💸)",
-     "status": "ideia",
-     "ref": "2DA de inteligência",
-     "voto": "amei+menos"
+     "ganha": "O mago aprende QUALQUER pergaminho, nunca falha (100%)",
+     "paga": "Nada (versão 💸)",
+     "status": "pronto",
+     "ref": "bg_mods.py pergaminho_seguro",
+     "voto": "amei+menos",
+     "receita": "python -I bg_mods.py   (função pergaminho_seguro; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 23,
@@ -2891,21 +2901,23 @@
      "n": 2,
      "emoji": "💜",
      "nome": "Imoen Prodígio",
-     "ganha": "Imoen (sua amiga ladra de infância) já começa sabendo 2 magias",
-     "paga": "Perde só 5 pontos de ladra (versão 💸)",
-     "status": "ideia",
-     "ref": "CRE imoen",
-     "voto": "amei+menos"
+     "ganha": "Imoen (sua amiga ladra) vira ladra E maga, como na expansão Dragonspear, já sabendo 2 magias",
+     "paga": "Perde 5 pontos em armadilhas, e a experiência dela se divide entre as duas classes (sobe um pouco mais devagar)",
+     "status": "pronto",
+     "ref": "bg_mods.py imoen_prodigio",
+     "voto": "amei+menos",
+     "receita": "python -I bg_mods.py   (função imoen_prodigio; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 3,
      "emoji": "🧙‍♂️",
      "nome": "Edwin Vaidoso",
-     "ganha": "Edwin (mago convencido e poderoso): o amuleto dele dá +1 magia por nível de magia",
-     "paga": "Reputação -1 quando ele entra no grupo",
-     "status": "ideia",
-     "ref": "ITM amul do Edwin",
-     "voto": "amei"
+     "ganha": "Edwin (mago convencido e poderoso): o amuleto dele dá +2 magias em cada nível de magia (era +1)",
+     "paga": "Nada por enquanto",
+     "status": "pronto",
+     "ref": "bg_mods.py edwin_vaidoso",
+     "voto": "amei",
+     "receita": "python -I bg_mods.py   (função edwin_vaidoso; o pacote sai em _SD prontos\\Baldurs Gate - ESCOLHIDOS)"
     },
     {
      "n": 4,
