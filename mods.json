@@ -2519,7 +2519,7 @@
      "n": 3,
      "emoji": "📖",
      "nome": "Mago Erudito",
-     "ganha": "Magos preparam 1 magia a mais por dia em cada nível de magia",
+     "ganha": "Magos preparam 2 magias a mais por dia em cada nível de magia (versão 🚀)",
      "paga": "Magos inimigos também ganham",
      "status": "ideia",
      "ref": "MXSPLWIZ.2DA",
@@ -2530,10 +2530,10 @@
      "emoji": "🧝",
      "nome": "Kits Livres",
      "ganha": "Mais raças podem escolher especializações (kits) e misturar duas classes",
-     "paga": "Atributos mínimos mais altos",
+     "paga": "Só continua valendo o atributo mínimo de cada kit (versão 💸)",
      "status": "ideia",
      "ref": "CLSRCREQ.2DA",
-     "voto": ""
+     "voto": "menos+sim"
     },
     {
      "n": 5,
@@ -2543,7 +2543,7 @@
      "paga": "Lojas cobram mais",
      "status": "ideia",
      "ref": "ITM",
-     "voto": ""
+     "voto": "amei"
     },
     {
      "n": 6,
@@ -2600,10 +2600,10 @@
      "emoji": "💱",
      "nome": "Comércio Livre",
      "ganha": "As lojas pagam mais pelo que você vende",
-     "paga": "Vendem mais caro",
+     "paga": "As lojas vendem só 10% mais caro (versão 💸)",
      "status": "ideia",
      "ref": "STO",
-     "voto": ""
+     "voto": "amei+menos"
     },
     {
      "n": 12,
@@ -2673,17 +2673,17 @@
      "paga": "Mais imprevisível",
      "status": "ideia",
      "ref": "WILDMAG",
-     "voto": ""
+     "voto": "amei"
     },
     {
      "n": 19,
      "emoji": "🙏",
      "nome": "Paladino Abençoado",
      "ganha": "A cura por toque do paladino (guerreiro sagrado) cura mais",
-     "paga": "Usos por dia menores",
+     "paga": "Nada (versão 💸)",
      "status": "ideia",
      "ref": "SPL",
-     "voto": ""
+     "voto": "amei+menos"
     },
     {
      "n": 20,
@@ -2710,10 +2710,10 @@
      "emoji": "📜",
      "nome": "Pergaminho Seguro",
      "ganha": "O mago nunca falha ao copiar uma magia do pergaminho para o livro",
-     "paga": "Custa mais ouro",
+     "paga": "Copiar custa só 10% mais ouro (versão 💸)",
      "status": "ideia",
      "ref": "2DA de inteligência",
-     "voto": ""
+     "voto": "amei+menos"
     },
     {
      "n": 23,
@@ -2744,6 +2744,126 @@
      "status": "ideia",
      "ref": "STO + 2DA",
      "voto": ""
+    },
+    {
+     "n": 26,
+     "emoji": "📚",
+     "nome": "Biblioteca do Mago",
+     "ganha": "Copiar uma magia NÃO gasta o pergaminho: o mago aprende e ainda pode vender ou dar para outro mago",
+     "paga": "Copiar custa um pouco mais de ouro",
+     "status": "ideia",
+     "ref": "pelo seu gosto · 2DA/SPL de escrever magia",
+     "voto": ""
+    },
+    {
+     "n": 27,
+     "emoji": "🔮",
+     "nome": "Escolas Abertas",
+     "ganha": "Mago especialista (o que escolhe uma escola de magia) pode aprender as magias da escola \"proibida\"",
+     "paga": "Essas magias ocupam 1 espaço a mais",
+     "status": "ideia",
+     "ref": "pelo seu gosto · KITLIST / escolas",
+     "voto": ""
+    },
+    {
+     "n": 28,
+     "emoji": "🔁",
+     "nome": "Dupla Classe Sem Espera",
+     "ganha": "Quem troca de classe (dupla classe) recupera as habilidades antigas bem mais cedo",
+     "paga": "Os primeiros níveis da classe nova pedem 10% mais experiência",
+     "status": "ideia",
+     "ref": "pelo seu gosto · XPLEVEL / dupla classe",
+     "voto": ""
+    },
+    {
+     "n": 29,
+     "emoji": "🗡️",
+     "nome": "Mago de Batalha",
+     "ganha": "Magos podem usar espada longa e armadura leve sem perder as magias",
+     "paga": "Lançar magia de armadura demora um pouco mais",
+     "status": "ideia",
+     "ref": "pelo seu gosto · ITM/SPL",
+     "voto": ""
+    },
+    {
+     "n": 30,
+     "emoji": "🌟",
+     "nome": "Lendas Vivas",
+     "ganha": "Todo item lendário (os que têm nome próprio) ganha um poder extra",
+     "paga": "As lojas pagam menos por eles (vale mais usar do que vender)",
+     "status": "ideia",
+     "ref": "pelo seu gosto · ITM únicos",
+     "voto": ""
+    },
+    {
+     "n": 31,
+     "emoji": "🏋️",
+     "nome": "Carga de Herói",
+     "ganha": "O grupo carrega 50% mais peso",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · STRMOD (peso)",
+     "voto": ""
+    },
+    {
+     "n": 32,
+     "emoji": "🪄",
+     "nome": "Varinhas Recarregáveis",
+     "ganha": "Varinhas mágicas recarregam um pouco a cada descanso",
+     "paga": "Começam com metade das cargas",
+     "status": "ideia",
+     "ref": "pelo seu gosto · ITM varinhas",
+     "voto": ""
+    },
+    {
+     "n": 33,
+     "emoji": "📈",
+     "nome": "Teto de Lenda II",
+     "ganha": "No BG2 e no Trono de Bhaal os heróis também sobem mais níveis",
+     "paga": "Os chefes finais ficam mais fortes",
+     "status": "ideia",
+     "ref": "pelo seu gosto · XPCAP",
+     "voto": ""
+    },
+    {
+     "n": 34,
+     "emoji": "💰",
+     "nome": "Comprador Sem Limite",
+     "ganha": "Em cada cidade, uma loja compra qualquer coisa, sem acabar o dinheiro dela",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · STO",
+     "voto": ""
+    },
+    {
+     "n": 35,
+     "emoji": "🎲",
+     "nome": "Segunda Chance Selvagem",
+     "ganha": "O mago selvagem (magia imprevisível) pode jogar de novo 1 magia que saiu ruim por dia",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · WILDMAG/SPL",
+     "voto": ""
+    },
+    {
+     "n": 36,
+     "emoji": "✋",
+     "nome": "Mãos Sagradas",
+     "ganha": "A cura por toque do paladino pode ser usada 3 vezes por dia",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · SPL paladino",
+     "voto": ""
+    },
+    {
+     "n": 37,
+     "emoji": "🧠",
+     "nome": "Grimório Sem Limite",
+     "ganha": "O mago pode aprender quantas magias quiser de cada nível (hoje a inteligência limita)",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · 2DA inteligência",
+     "voto": ""
     }
    ],
    "pacote": null
@@ -2772,10 +2892,10 @@
      "emoji": "💜",
      "nome": "Imoen Prodígio",
      "ganha": "Imoen (sua amiga ladra de infância) já começa sabendo 2 magias",
-     "paga": "Perde 10 pontos de ladra",
+     "paga": "Perde só 5 pontos de ladra (versão 💸)",
      "status": "ideia",
      "ref": "CRE imoen",
-     "voto": ""
+     "voto": "amei+menos"
     },
     {
      "n": 3,
@@ -2785,7 +2905,7 @@
      "paga": "Reputação -1 quando ele entra no grupo",
      "status": "ideia",
      "ref": "ITM amul do Edwin",
-     "voto": ""
+     "voto": "amei"
     },
     {
      "n": 4,
@@ -3555,6 +3675,36 @@
      "paga": "Sua reputação começa 1 ponto menor",
      "status": "ideia",
      "ref": "SPL poderes de Bhaal",
+     "voto": ""
+    },
+    {
+     "n": 81,
+     "emoji": "💜",
+     "nome": "Imoen de Duas Artes",
+     "ganha": "Imoen (sua amiga ladra) vira ladra E maga ao mesmo tempo, sem perder nada",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · CRE imoen (multiclasse)",
+     "voto": ""
+    },
+    {
+     "n": 82,
+     "emoji": "⚔️",
+     "nome": "Rivais de Magia",
+     "ganha": "Edwin (mago convencido) e Imoen juntos no grupo: a cada magia de ataque de um, a próxima do outro causa +2 de dano",
+     "paga": "Os dois vivem discutindo (só conversa)",
+     "status": "ideia",
+     "ref": "pelo seu gosto · SPL + script",
+     "voto": ""
+    },
+    {
+     "n": 83,
+     "emoji": "📜",
+     "nome": "Aulas de Thay",
+     "ganha": "Edwin ensina: os magos do grupo aprendem as magias que ele conhece sem precisar de pergaminho",
+     "paga": "Ele cobra 100 de ouro por aula",
+     "status": "ideia",
+     "ref": "pelo seu gosto · script edwin",
      "voto": ""
     }
    ],
@@ -4367,6 +4517,36 @@
      "paga": "O sequestro de Imoen custa mais para resolver (20.000 de ouro vira 25.000)",
      "status": "ideia",
      "ref": "script capítulo 2",
+     "voto": ""
+    },
+    {
+     "n": 81,
+     "emoji": "💜",
+     "nome": "Imoen Filha de Bhaal",
+     "ganha": "Imoen (sua irmã de sangue, filha de Bhaal como você) ganha poderes de Bhaal também",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · SPL bhaal / CRE imoen",
+     "voto": ""
+    },
+    {
+     "n": 82,
+     "emoji": "🔥",
+     "nome": "Edwin Supremo",
+     "ganha": "Edwin (mago convencido) com um amuleto melhor: +1 magia de cada nível no BG2",
+     "paga": "Às vezes a magia dele dá errado e ele vira a \"Edwina\" por um dia",
+     "status": "ideia",
+     "ref": "pelo seu gosto · ITM amuleto do Edwin",
+     "voto": ""
+    },
+    {
+     "n": 83,
+     "emoji": "🎓",
+     "nome": "Mestre de Magia",
+     "ganha": "Os magos aprendem 1 magia nova de graça a cada nível que sobem",
+     "paga": "Nada",
+     "status": "ideia",
+     "ref": "pelo seu gosto · 2DA/SPL",
      "voto": ""
     }
    ],
