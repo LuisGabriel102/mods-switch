@@ -1286,6 +1286,106 @@
     },
     {
      "n": 31,
+     "emoji": "🪵",
+     "nome": "Serraria Turbo",
+     "ganha": "A serraria dos zumbis corta a madeira em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (zombie_sawmill)",
+     "voto": ""
+    },
+    {
+     "n": 32,
+     "emoji": "🥕",
+     "nome": "Horta Zumbi Turbo",
+     "ganha": "A horta dos zumbis colhe em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (zombie_garden_desk_*)",
+     "voto": ""
+    },
+    {
+     "n": 33,
+     "emoji": "🍇",
+     "nome": "Vinhedo Turbo",
+     "ganha": "O vinhedo dos zumbis colhe uva e lúpulo em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (zombie_vineyard_desk_*)",
+     "voto": ""
+    },
+    {
+     "n": 34,
+     "emoji": "⛰️",
+     "nome": "Mina Zumbi Turbo",
+     "ganha": "A mina dos zumbis tira pedra e minério em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (mine_zombie_bench, zombie_mine_*)",
+     "voto": ""
+    },
+    {
+     "n": 35,
+     "emoji": "🍳",
+     "nome": "Cozinha Relâmpago",
+     "ganha": "Toda comida fica pronta em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (cooking_table, oven...)",
+     "voto": ""
+    },
+    {
+     "n": 36,
+     "emoji": "🩻",
+     "nome": "Autópsia Rápida",
+     "ganha": "Preparar o corpo na mesa do necrotério leva 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (mesa de autópsia)",
+     "voto": ""
+    },
+    {
+     "n": 37,
+     "emoji": "⚰️",
+     "nome": "Enterro Relâmpago",
+     "ganha": "Cavar a cova e enterrar leva 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_obj_data: craft_time (túmulos)",
+     "voto": ""
+    },
+    {
+     "n": 38,
+     "emoji": "✒️",
+     "nome": "Escrita Relâmpago",
+     "ganha": "Escrever sermões, papel e livros leva 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (table_book_constr...)",
+     "voto": ""
+    },
+    {
+     "n": 39,
+     "emoji": "🏕️",
+     "nome": "Refugiados Velozes",
+     "ganha": "(DLC) O acampamento dos refugiados produz em 1/4 do tempo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_time (refugee_camp*)",
+     "voto": ""
+    },
+    {
+     "n": 40,
+     "emoji": "🐠",
+     "nome": "Pesca Rápida",
+     "ganha": "O peixe morde a isca bem mais rápido (menos espera no lago)",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "buffs_data: buff_fishing (buff_fish_catch_time_mltplr) / fishes_data",
+     "voto": ""
+    },
+    {
+     "n": 41,
      "emoji": "📦",
      "nome": "Baús Grandes",
      "ganha": "Baús e armazéns guardam o dobro (experimental: a tela pode não mostrar tudo)",
@@ -1295,7 +1395,7 @@
      "voto": ""
     },
     {
-     "n": 32,
+     "n": 42,
      "emoji": "🎣",
      "nome": "Pescador Sortudo",
      "ganha": "Peixes raros mordem a isca bem mais vezes",
@@ -1305,7 +1405,7 @@
      "voto": ""
     },
     {
-     "n": 33,
+     "n": 43,
      "emoji": "🧾",
      "nome": "Missões Generosas",
      "ganha": "Recompensas das missões em dobro",
@@ -1315,7 +1415,7 @@
      "voto": ""
     },
     {
-     "n": 34,
+     "n": 44,
      "emoji": "🥃",
      "nome": "Destilaria Farta",
      "ganha": "Destiladores e cubos rendem o dobro",
@@ -1325,7 +1425,7 @@
      "voto": ""
     },
     {
-     "n": 35,
+     "n": 45,
      "emoji": "⚒️",
      "nome": "Forja Farta",
      "ganha": "Fornalhas e bigornas rendem o dobro (barras, pregos, peças)",
@@ -1335,7 +1435,7 @@
      "voto": ""
     },
     {
-     "n": 36,
+     "n": 46,
      "emoji": "🪚",
      "nome": "Carpinteiro Generoso",
      "ganha": "Cavalete e bancada de madeira rendem o dobro (tábuas, vigas)",
@@ -1345,7 +1445,7 @@
      "voto": ""
     },
     {
-     "n": 37,
+     "n": 47,
      "emoji": "🧱",
      "nome": "Pedreiro Generoso",
      "ganha": "Bancada de pedra rende o dobro (lajes, blocos, mármore)",
@@ -1355,7 +1455,7 @@
      "voto": ""
     },
     {
-     "n": 38,
+     "n": 48,
      "emoji": "📜",
      "nome": "Escriba Generoso",
      "ganha": "Mesa de livros e papéis rende o dobro (tinta, papel, sermões)",
@@ -1365,7 +1465,7 @@
      "voto": ""
     },
     {
-     "n": 39,
+     "n": 49,
      "emoji": "🥬",
      "nome": "Canteiro Dobrado",
      "ganha": "Canteiros do jardim colhem o dobro de verduras",
@@ -1375,7 +1475,7 @@
      "voto": ""
     },
     {
-     "n": 40,
+     "n": 50,
      "emoji": "🏕️",
      "nome": "Refugiados Animados",
      "ganha": "(DLC) O acampamento dos refugiados produz o dobro",
@@ -1385,7 +1485,7 @@
      "voto": ""
     },
     {
-     "n": 41,
+     "n": 51,
      "emoji": "🔩",
      "nome": "Mineiro Firme",
      "ganha": "Veios de minério (ferro, prata, ouro) quebram com metade dos golpes",
@@ -1395,7 +1495,7 @@
      "voto": ""
     },
     {
-     "n": 42,
+     "n": 52,
      "emoji": "💎",
      "nome": "Masmorra Generosa",
      "ganha": "Monstros e baús da masmorra soltam 50% mais coisas",
@@ -1405,7 +1505,87 @@
      "voto": ""
     },
     {
-     "n": 43,
+     "n": 53,
+     "emoji": "🍯",
+     "nome": "Abelhas Generosas",
+     "ganha": "Colmeias rendem o dobro de mel e cera",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_in beehouse*",
+     "voto": ""
+    },
+    {
+     "n": 54,
+     "emoji": "🍾",
+     "nome": "Adega Farta",
+     "ganha": "Vinhedo e adega rendem o dobro de vinho e cerveja",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_in mf_zombie_winemaking, mf_zombie_brewing",
+     "voto": ""
+    },
+    {
+     "n": 55,
+     "emoji": "🔪",
+     "nome": "Açougueiro Preciso",
+     "ganha": "A mesa de autópsia tira o dobro de carne, gordura e sangue de cada corpo",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: saídas da mesa de autópsia",
+     "voto": ""
+    },
+    {
+     "n": 56,
+     "emoji": "🏺",
+     "nome": "Oleiro Farto",
+     "ganha": "A roda de oleiro rende o dobro de vasos e tijolos",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_in (roda de oleiro)",
+     "voto": ""
+    },
+    {
+     "n": 57,
+     "emoji": "🌾",
+     "nome": "Moinho Farto",
+     "ganha": "O moinho rende o dobro de farinha",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "craft_data: craft_in (moinho)",
+     "voto": ""
+    },
+    {
+     "n": 58,
+     "emoji": "🪨",
+     "nome": "Mina Farta",
+     "ganha": "Veios de minério soltam o dobro de minério",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "objs_data: ore* drop_items",
+     "voto": ""
+    },
+    {
+     "n": 59,
+     "emoji": "💍",
+     "nome": "Gemas Brilhantes",
+     "ganha": "Pedras preciosas (esmeralda, diamante, obsidiana) aparecem bem mais na mina",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "objs_data: drop_items com chance (a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 60,
+     "emoji": "⛪",
+     "nome": "Caixinha de Esmolas",
+     "ganha": "A caixa de doações da igreja junta o dobro de moedas",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(caixa de doações: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 61,
      "emoji": "🧊",
      "nome": "Corpos Fresquinhos",
      "ganha": "Os corpos estragam bem mais devagar: dá para juntar vários e preparar com calma",
@@ -1415,7 +1595,7 @@
      "voto": ""
     },
     {
-     "n": 44,
+     "n": 62,
      "emoji": "💀",
      "nome": "Necrotério Gourmet",
      "ganha": "Corpos chegam com mais caveiras brancas (melhor qualidade de começo)",
@@ -1425,7 +1605,7 @@
      "voto": ""
     },
     {
-     "n": 45,
+     "n": 63,
      "emoji": "⭐",
      "nome": "Cemitério Estrelado",
      "ganha": "Cada túmulo enfeitado dá mais pontos de qualidade ao cemitério",
@@ -1435,7 +1615,7 @@
      "voto": ""
     },
     {
-     "n": 46,
+     "n": 64,
      "emoji": "🧠",
      "nome": "Cabeça no Lugar",
      "ganha": "Trabalhos que mexem com a sanidade gastam metade",
@@ -1445,7 +1625,7 @@
      "voto": ""
     },
     {
-     "n": 47,
+     "n": 65,
      "emoji": "😴",
      "nome": "Sono Reparador",
      "ganha": "Dormir recupera a energia bem mais rápido (menos tempo na cama, mais tempo jogando)",
@@ -1455,7 +1635,7 @@
      "voto": ""
     },
     {
-     "n": 48,
+     "n": 66,
      "emoji": "🙏",
      "nome": "Igreja Cheia",
      "ganha": "O sermão atrai 50% mais fiéis",
@@ -1465,7 +1645,7 @@
      "voto": ""
     },
     {
-     "n": 49,
+     "n": 67,
      "emoji": "⚔️",
      "nome": "Golpe Certeiro",
      "ganha": "A vantagem de espadachim dá o dobro de dano (+10, era +5)",
@@ -1475,13 +1655,133 @@
      "voto": ""
     },
     {
-     "n": 50,
+     "n": 68,
      "emoji": "💼",
      "nome": "Freguês Preferido",
      "ganha": "Os vendedores sobem de nível (vendem coisas melhores) com metade das compras",
      "paga": "Nada (jogo difícil: sem desvantagem)",
      "status": "achado",
      "ref": "vendors_data: levelup_costs",
+     "voto": ""
+    },
+    {
+     "n": 69,
+     "emoji": "🕯️",
+     "nome": "Velas Eternas",
+     "ganha": "Velas e incensos da igreja duram o dobro",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "items_data: candle_*, incense_* durability",
+     "voto": ""
+    },
+    {
+     "n": 70,
+     "emoji": "🦴",
+     "nome": "Ossos Valiosos",
+     "ganha": "Partes do corpo (crânio, ossos, carne, gordura) valem o TRIPLO na venda: o necrotério vira um negócio",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "items_data: custom_sell_price_koeff (partes do corpo)",
+     "voto": ""
+    },
+    {
+     "n": 71,
+     "emoji": "🪦",
+     "nome": "Lápide Duradoura",
+     "ganha": "Cruzes, lápides e cercas do cemitério quase não estragam",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "achado",
+     "ref": "res: dur_cross, dur_fence",
+     "voto": ""
+    },
+    {
+     "n": 72,
+     "emoji": "💤",
+     "nome": "Sonho Lúcido",
+     "ganha": "Cada noite de sono dá alguns pontos azuis (você aprende até dormindo)",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(script do sono: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 73,
+     "emoji": "🧟",
+     "nome": "Zumbi Caprichoso",
+     "ganha": "Zumbi feito de corpo ruim trabalha quase tão bem quanto um de corpo bom",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(eficiência dos zumbis: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 74,
+     "emoji": "🤝",
+     "nome": "Pechincha",
+     "ganha": "Tudo que você compra custa 25% menos",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(preço de compra dos vendedores: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 75,
+     "emoji": "🌙",
+     "nome": "Noite Produtiva",
+     "ganha": "À noite os trabalhos gastam metade da energia (bom para quem joga até tarde)",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "craft_data: energy com fórmula da hora (a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 76,
+     "emoji": "🍀",
+     "nome": "Sorte do Coveiro",
+     "ganha": "Itens raros (os que só às vezes caem) caem com mais frequência",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "drop_items: chance_group (a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 77,
+     "emoji": "🧹",
+     "nome": "Cemitério Limpo",
+     "ganha": "Lixo e mato nascem bem menos no cemitério",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(nascimento de lixo/mato: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 78,
+     "emoji": "🎶",
+     "nome": "Taverna Famosa",
+     "ganha": "(DLC) A fama da taverna sobe o dobro a cada noite boa",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "tavern_events / tavern_reputation_item",
+     "voto": ""
+    },
+    {
+     "n": 79,
+     "emoji": "🔦",
+     "nome": "Lampião Forte",
+     "ganha": "Na masmorra você enxerga mais longe e os monstros não te pegam de surpresa",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "(luz da masmorra: a estudar)",
+     "voto": ""
+    },
+    {
+     "n": 80,
+     "emoji": "📢",
+     "nome": "Pregador Famoso",
+     "ganha": "Cada sermão NOVO que você escreve rende mais fé que os antigos (vale a pena escrever)",
+     "paga": "Nada (jogo difícil: sem desvantagem)",
+     "status": "ideia",
+     "ref": "items_data: sermões (a estudar)",
      "voto": ""
     }
    ],
